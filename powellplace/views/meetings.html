@@ -1,0 +1,55 @@
+<div class="container">
+	<div class="jumbotron">
+		<h1>Monthly Association Meetings</h1>
+	
+		<p>
+			Monthly meetings are throughout the year on the second Thursday of the month at 6:00 pm.  All are encouraged to attend.
+		</p>
+		<p>
+			An annual meeting is usually held in January/February at the Village Green, 47 Hall Street.
+		</p>
+		<p>
+			All other meetings are held in various homes in the neighborhood.  Please see the schedule below.
+		</p>
+	</div>
+	
+	<h2 class="sub-header">Upcoming Meetings</h2>
+	<div class="table-responsive">
+		<table class="table table-striped">
+			<thead>
+				<tr>
+					<th scope="col">Date</th>
+					<th scope="col">Host</th>
+					<th scope="col">Agenda</th>
+				</tr>
+			</thead>
+			<tbody>
+				<tr ng-repeat="meeting in meetings.slice().reverse()" ng-show="meeting.date && isFuture( meeting.date )">
+					<td>{{meeting.date | date : 'MMMM d, yyyy'}}</td>
+					<td>{{meeting.host}}</td>
+					<td><a href="{{meeting.agenda}}" ng-show="meeting.agenda">agenda</a></td>
+				</tr>
+			</tbody>
+		</table>
+	</div>
+	
+	<h2 class="sub-header">Previous Meetings</h2>
+	<div class="table-responsive">
+		<table class="table table-striped">
+			<thead>
+				<tr>
+					<th scope="col">Date</th>
+					<th scope="col">Agenda</th>
+					<th scope="col">Minutes</th>
+				</tr>
+			</thead>
+			<tbody>
+				<tr ng-repeat="meeting in meetings" ng-show="meeting.date && isPast( meeting.date )">
+					<td>{{meeting.date | date : 'MMMM d, yyyy'}}</td>
+					<td><a href="{{meeting.agenda}}" ng-show="meeting.agenda">agenda</a><span ng-show="meeting.cancelled">cancelled</span></td>
+					<td><a href="{{meeting.minutes}}" ng-show="meeting.minutes">minutes</a><span ng-show="meeting.cancelled">cancelled</span></td>
+				</tr>
+			</tbody>
+		</table>
+	</div>
+</div>

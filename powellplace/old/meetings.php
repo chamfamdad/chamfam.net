@@ -1,0 +1,801 @@
+<!DOCTYPE html>
+
+<html lang="en">
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="description" content="Website of the Association of Powell Place Home Owners">
+    <meta name="author" content="APPHO">
+
+    <title>Powell Place - Meetings</title>
+    
+	<link rel="stylesheet" href="//netdna.bootstrapcdn.com/bootstrap/3.1.1/css/bootstrap.min.css">
+	<link rel="stylesheet" href="//netdna.bootstrapcdn.com/bootstrap/3.1.1/css/bootstrap-theme.min.css">
+
+    <!-- HTML5 shim and Respond.js IE8 support of HTML5 elements and media queries -->
+    <!--[if lt IE 9]>
+      <script src="https://oss.maxcdn.com/libs/html5shiv/3.7.0/html5shiv.js"></script>
+      <script src="https://oss.maxcdn.com/libs/respond.js/1.4.2/respond.min.js"></script>
+    <![endif]-->
+</head>
+<body role="document">
+
+	<?php
+		$page = "meetings";
+		include( 'navbar.php' ); 
+	?>
+	<div class="container" role="main">
+		<div class="jumbotron">
+			<h1>Monthly Association Meetings</h1>
+		
+			<p>
+				Monthly meetings are throughout the year on the second Thursday of the month at 6:00 pm.  All are encouraged to attend.
+			</p>
+			<p>
+				An annual meeting is usually held in January/February at the Village Green, 47 Hall Street.
+			</p>
+			<p>
+				All other meetings are held in various homes in the neighborhood.  Please see the schedule below.
+			</p>
+		</div>
+
+		<h2 class="sub-header">Upcoming Meetings</h2>
+		<div class="table-responsive">
+			<table class="table table-striped">
+				<thead>
+					<tr>
+						<th scope="col">Date</th>
+						<th scope="col">Host</th>
+						<th scope="col">Agenda</th>
+					</tr>
+				</thead>
+				<tbody>
+					<tr>
+						<td>August 14, 2014</td>
+						<td>Robert Davis</td>
+						<td></td>
+					</tr>
+		
+					<tr>
+						<td>Sept 11, 2014</td>
+						<td>Brian Coghlan</td>
+						<td></td>
+					</tr>
+		
+					<tr>
+						<td>October 9, 2014</td>
+						<td>John Seymour</td>
+						<td></td>
+					</tr>
+		
+					<tr>
+						<td>November 13, 2014</td>
+						<td>Mark Roehl</td>
+						<td></td>
+					</tr>
+		
+					<tr>
+						<td>December 11, 2014</td>
+						<td>Fletcher Chambers</td>
+						<td></td>
+					</tr>
+				</tbody>
+			</table>
+		</div>
+		
+		<h2 class="sub-header">Previous Meetings</h2>
+		<div class="table-responsive">
+			<table class="table table-striped">
+				<thead>
+					<tr>
+						<th scope="col">Date</th>
+						<th scope="col">Agenda</th>
+						<th scope="col">Minutes</th>
+					</tr>
+				</thead>
+				<tbody>
+					<tr>
+						<td>July 10, 2014</td>
+						<td><a href="./agenda/2014-07.pdf">agenda</a> (PDF 52K)</td>
+						<td></td>
+					</tr>
+		
+					<tr>
+						<td>June 12, 2014</td>
+						<td>canceled</td>
+						<td></td>
+					</tr>
+		
+					<tr>
+						<td>May 8, 2014</td>
+						<td><a href="./agenda/2014-05.pdf">agenda</a> (PDF 53K)</td>
+						<td><a href="./minutes/2014-05.pdf">minutes</a> (PDF 100K)</td>
+					</tr>
+		
+					<tr>
+						<td>April 10, 2014</td>
+						<td>canceled</td>
+						<td></td>
+					</tr>
+		
+					<tr>
+						<td>March 13, 2014</td>
+						<td><a href="./agenda/2014-03.pdf">agenda</a> (PDF 51K)</td>
+						<td></td>
+					</tr>
+		
+					<tr>
+						<td>January 30, 2014</td>
+						<td><a href="./newsletter/2014-01.pdf">see the newsletter</a> (PDF 255kb)</td>
+						<td><a href="./minutes/2014-01.pdf">minutes</a> (PDF 34)</td>
+					</tr>
+		
+					<tr>
+						<td>December 12, 2013</td>
+						<td>canceled</td>
+						<td></td>
+					</tr>
+		
+					<tr>
+						<td>November 14, 2013</td>
+						<td><a href="./agenda/2013-11.pdf">agenda</a> (PDF 52K)</td>
+						<td><a href="./minutes/2013-11.rtf">minutes</a> (RTF 6K)</td>
+					</tr>
+					
+					<tr>
+						<td>October 10, 2013</td>
+						<td>canceled</td>
+						<td></td>
+					</tr>
+		
+					<tr>
+						<td>September 5, 2013</td>
+						<td><a href="./agenda/2013-09.pdf">agenda</a> (PDF 53K)</td>
+						<td><a href="./minutes/2013-09.rtf">minutes</a> (RTF 6K)</td>
+					</tr>
+		
+					<tr>
+						<td>August 8, 2013</td>
+						<td>canceled</td>
+						<td></td>
+					</tr>
+					
+					<tr>
+						<td>July 11, 2013</td>
+						<td>canceled</td>
+						<td></td>
+					</tr>
+					
+					<tr>
+						<td>June 13, 2013</td>
+						<td><a href="./agenda/2013-06.rtf">agenda</a> (RTF 1K)</td>
+						<td><a href="./minutes/2013-06.rtf">minutes</a> (RTF 7K)</td>
+					</tr>
+					
+					<tr>
+						<td>May 9, 2013</td>
+						<td><a href="./agenda/2013-05.rtf">agenda</a> (RTF 1K)</td>
+						<td><a href="./minutes/2013-05.rtf">minutes</a> (RTF 5K)</td>
+					</tr>
+					
+					<tr>
+						<td>April 11, 2013</td>
+						<td><a href="./agenda/2013-04.rtf">agenda</a> (RTF 1K)</td>
+						<td><a href="./minutes/2013-04.rtf">minutes</a> (RTF 7K)</td>
+					</tr>
+					
+					<tr>
+						<td>March 14, 2013</td>
+						<td><a href="./agenda/2013-03.rtf">agenda</a> (RTF 1K)</td>
+						<td><a href="./minutes/2013-03.rtf">minutes</a> (RTF 7K)</td>
+					</tr>
+					<tr>
+						<td>January 31, 2013</td>
+						<td><a href="./agenda/2013-01.rtf">agenda</a> (RTF 1K)</td>
+						<td><a href="./minutes/2013-01.rtf">minutes</a> (RTF 7K)</td>
+					</tr>
+		
+					<tr>
+						<td>December 13, 2012</td>
+						<td><a href="./agenda/2012-12.rtf">agenda</a> (RTF 1K)</td>
+						<td><a href="./minutes/2012-12.rtf">minutes</a> (RTF 7K)</td>
+					</tr>
+		
+					<tr>
+						<td>November 8, 2012</td>
+						<td><a href="./agenda/2012-11.rtf">agenda</a> (RTF 2K)</td>
+						<td><a href="./minutes/2012-11.rtf">minutes</a> (RTF 7K)</td>
+					</tr>
+		
+					<tr>
+						<td>October 11, 2012</td>
+						<td><a href="./agenda/2012-10.rtf">agenda</a> (RTF 2K)</td>
+						<td><a href="./minutes/2012-10.rtf">minutes</a> (RTF 13K)</td>
+					</tr>
+		
+					<tr>
+						<td>September 13, 2012</td>
+						<td>canceled</td>
+						<td></td>
+					</tr>
+		
+					<tr>
+						<td>August 9, 2012</td>
+						<td>canceled</td>
+						<td></td>
+					</tr>
+		
+					<tr>
+						<td>July 12, 2012</td>
+						<td><a href="./agenda/2012-07.rtf">agenda</a> (RTF 2K)</td>
+						<td><a href="./minutes/2012-07.rtf">minutes</a> (RTF 7K)</td>
+					</tr>
+		
+					<tr>
+						<td>June 14, 2012</td>
+						<td>canceled</td>
+						<td></td>
+					</tr>
+		
+					<tr>
+						<td>May 10, 2012</td>
+						<td><a href="./agenda/2012-05.rtf">agenda</a> (RTF 2K)</td>
+						<td><a href="./minutes/2012-05.rtf">minutes</a> (RTF 5K)</td>
+					</tr>
+		
+					<tr>
+						<td>April 12, 2012</td>
+						<td>canceled</td>
+						<td></td>
+					</tr>
+		
+					<tr>
+						<td>March 8, 2012</td>
+						<td><a href="./agenda/2012-03.rtf">agenda</a> (RTF 3K)</td>
+						<td><a href="./minutes/2012-03.rtf">minutes</a> (RTF 9K)</td>
+					</tr>
+		
+					<tr>
+						<td>February 9, 2012</td>
+						<td><a href="./agenda/2012-02.rtf">agenda</a> (RTF 2K)</td>
+						<td><a href="./minutes/2012-02.rtf">minutes</a> (RTF 5K)</td>
+					</tr>
+		
+					<tr>
+						<td>January 12, 2012</td>
+						<td><a href="./agenda/2012-01.rtf">agenda</a> (RTF 1K)</td>
+						<td><a href="./minutes/2012-01.rtf">minutes</a> (RTF 6K)</td>
+					</tr>
+		
+					<tr>
+						<td>December 8, 2011</td>
+						<td><a href="./agenda/2011-12.rtf">agenda</a> (RTF 2K)</td>
+						<td><a href="./minutes/2011-12.rtf">minutes</a> (RTF 3K)</td>
+					</tr>
+		
+								<tr>
+						<td>November 10, 2011</td>
+						<td><a href="./agenda/2011-11.rtf">agenda</a> (RTF 2K)</td>
+						<td><a href="./minutes/2011-11.rtf">minutes</a> (RTF 4K)</td>
+					</tr>
+		
+					<tr>
+						<td>October 13, 2011</td>
+						<td><a href="./agenda/2011-10.rtf">agenda</a> (RTF 3K)</td>
+						<td><a href="./minutes/2011-10.rtf">minutes</a> (RTF 4K)</td>
+					</tr>
+		
+					<tr>
+						<td>September 8, 2011</td>
+						<td><a href="./agenda/2011-09.rtf">agenda</a> (RTF 3K)</td>
+						<td><a href="./minutes/2011-09.rtf">minutes</a> (RTF 6K)</td>
+					</tr>
+		
+					<tr>
+						<td>August 11, 2011</td>
+						<td><a href="./agenda/2011-08.rtf">agenda</a> (RTF 3K)</td>
+						<td></td>
+					</tr>
+		
+					<tr>
+						<td>July 14, 2011</td>
+						<td><a href="./agenda/2011-07.rtf">agenda</a> (RTF 3K)</td>
+						<td><a href="./minutes/2011-07.rtf">minutes</a> (RTF 4K)</td>
+					</tr>
+		
+					<tr>
+						<td>June 9, 2011</td>
+						<td><a href="./agenda/2011-06.rtf">agenda</a> (RTF 3K)</td>
+						<td><a href="./minutes/2011-06.rtf">minutes</a> (RTF 3K)</td>
+					</tr>
+		
+					<tr>
+						<td>May 12, 2011</td>
+						<td><a href="./agenda/2011-05.rtf">agenda</a> (RTF 3K)</td>
+						<td><a href="./minutes/2011-05.rtf">minutes</a> (RTF 5K)</td>
+					</tr>
+		
+					<tr>
+						<td>April 14, 2011</td>
+						<td><a href="./agenda/2011-04.rtf">agenda</a> (RTF 2K)</td>
+						<td><a href="./minutes/2011-04.rtf">minutes</a> (RTF 5K)</td>
+					</tr>
+		
+					<tr>
+						<td>March 10, 2011</td>
+						<td><a href="./agenda/2011-03.rtf">agenda</a> (RTF 2K)</td>
+						<td><a href="./minutes/2011-03.rtf">minutes</a> (RTF 5K)</td>
+					</tr>
+		
+					<tr>
+						<td>February 10, 2011</td>
+						<td><a href="./agenda/2011-02.rtf">agenda</a> (RTF 2K)</td>
+						<td><a href="./minutes/2011-02.rtf">minutes</a> (RTF 5K)</td>
+					</tr>
+		
+					<tr>
+						<td>January 13, 2011</td>
+						<td><a href="./agenda/2011-01.rtf">agenda</a> (RTF 2K)</td>
+						<td><a href="./minutes/2011-01.rtf">minutes</a> (RTF 5K)</td>
+					</tr>
+		
+					<tr>
+						<td>December 9, 2010</td>
+						<td><a href="./agenda/2010-12.rtf">agenda</a> (RTF 2K)</td>
+						<td><a href="./minutes/2010-12.rtf">minutes</a> (RTF 5K)</td>
+					</tr>
+		
+					<tr>
+						<td>November 11, 2010</td>
+						<td><a href="./agenda/2010-11.rtf">agenda</a> (RTF 1K)</td>
+						<td><a href="./minutes/2010-11.rtf">minutes</a> (RTF 6K)</td>
+					</tr>
+		
+								<tr>
+						<td>October 14, 2010</td>
+						<td><a href="./agenda/2010-10.rtf">agenda</a> (RTF 2K)</td>
+						<td>Meeting canceled</td>
+					</tr>
+		
+								<tr>
+						<td>September 9, 2010</td>
+						<td><a href="./agenda/2010-09.rtf">agenda</a> (RTF 2K)</td>
+						<td><a href="./minutes/2010-09.rtf">minutes</a> (RTF 7K)</td>
+					</tr>
+					<tr>
+						<td>August 12, 2010</td>
+						<td><a href="./agenda/2010-08.rtf">agenda</a> (RTF 2K)</td>
+						<td><a href="./minutes/2010-08.rtf">minutes</a> (RTF 6K)</td>
+					</tr>
+					<tr>
+						<td>July 8, 2010</td>
+						<td><a href="./agenda/2010-07.rtf">agenda</a> (RTF 2K)</td>
+						<td><a href="./minutes/2010-07.rtf">minutes</a> (RTF 5K)</td>
+					</tr>
+					<tr>
+						<td>June 10, 2010</td>
+						<td><a href="./agenda/2010-06.rtf">agenda</a> (RTF 3K)</td>
+						<td><a href="./minutes/2010-06.rtf">minutes</a> (RTF 6K)</td>
+					</tr>
+					<tr>
+						<td>May 13, 2010</td>
+						<td><a href="./agenda/2010-05.rtf">agenda</a> (RTF 2K)</td>
+						<td><a href="./minutes/2010-05.rtf">minutes</a> (RTF 5K)</td>
+					</tr>
+					<tr>
+						<td>April 8, 2010</td>
+						<td><a href="./agenda/2010-04.rtf">agenda</a> (RTF 3K)</td>
+						<td><a href="./minutes/2010-04.rtf">minutes</a> (RTF 6K)</td>
+					</tr>
+					<tr>
+						<td>March 11, 2010</td>
+						<td><a href="./agenda/2010-03.rtf">agenda</a> (RTF 3K)</td>
+						<td><a href="./minutes/2010-03.rtf">minutes</a> (RTF 5K)</td>
+					</tr>
+					<tr>
+						<td>February 11, 2010</td>
+						<td><a href="./newsletter/2010-01.pdf">see the newsletter</a> (PDF 172kb)</td>
+						<td><a href="./minutes/2010-02.rtf">minutes</a> (RTF 6K)</td>
+					</tr>
+					<tr>
+						<td>January 14, 2010</td>
+						<td><a href="./agenda/2010-01.rtf">agenda</a> (RTF 3K)</td>
+						<td><a href="./minutes/2010-01.rtf">minutes</a> (RTF 5K)</td>
+					</tr>
+					<tr>
+						<td>December 10, 2009</td>
+						<td><a href="./agenda/2009-12.rtf">agenda</a> (RTF 3K)</td>
+						<td><a href="./minutes/2009-12.rtf">minutes</a> (RTF 5K)</td>
+					</tr>
+					<tr>
+						<td>November 12, 2009</td>
+						<td><a href="./agenda/2009-11.rtf">agenda</a> (RTF 3K)</td>
+						<td><a href="./minutes/2009-11.rtf">minutes</a> (RTF 9K)</td>
+					</tr>
+					<tr>
+						<td>October 8, 2009</td>
+						<td><a href="./agenda/2009-10.rtf">agenda</a> (RTF 3K)</td>
+						<td><a href="./minutes/2009-10.rtf">minutes</a> (RTF 6K)</td>
+					</tr>
+					<tr>
+						<td>September 10, 2009</td>
+						<td><a href="./agenda/2009-09.rtf">agenda</a> (RTF 3K)</td>
+						<td><a href="./minutes/2009-09.rtf">minutes</a> (RTF 6K)</td>
+					</tr>
+		
+					<tr>
+						<td>August 13, 2009</td>
+						<td><a href="./agenda/2009-08.rtf">agenda</a> (RTF 2K)</td>
+						<td><a href="./minutes/2009-08.rtf">minutes</a> (RTF 4K)</td>
+					</tr>
+					<tr>
+						<td>July 9, 2009</td>
+						<td><a href="./agenda/2009-07.rtf">agenda</a> (RTF 3K)</td>
+						<td><a href="./minutes/2009-07.rtf">minutes</a> (RTF 5K)</td>
+					</tr>
+					<tr>
+						<td>June 11, 2009</td>
+						<td><a href="./agenda/2009-06.rtf">agenda</a> (RTF 2K)</td>
+						<td><a href="./minutes/2009-06.pdf">minutes</a> (PDF 13K)</td>
+					</tr>
+					<tr>
+						<td>May 14, 2009</td>
+						<td><a href="./agenda/2009-05.rtf">agenda</a> (RTF 2K)</td>
+						<td><a href="./minutes/2009-05.rtf">minutes</a> (RTF 5K)</td>
+					</tr>
+					<tr>
+						<td>April 9, 2009</td>
+						<td><a href="./agenda/2009-04.rtf">agenda</a> (RTF 2K)</td>
+						<td><a href="./minutes/2009-04.rtf">minutes</a> (RTF 6K)</td>
+					</tr>
+					<tr>
+						<td>March 12, 2009</td>
+						<td><a href="./agenda/2009-03.rtf">agenda</a> (RTF 2K)</td>
+						<td><a href="./minutes/2009-03.rtf">minutes</a> (RTF 11K)</td>
+					</tr>
+					<tr>
+						<td>February 12, 2009</td>
+						<td><a href="./agenda/2009-02.rtf">agenda</a> (RTF 2K)</td>
+						<td><a href="./minutes/2009-02.rtf">minutes</a> (RTF 5K)</td>
+					</tr>
+					<tr>
+						<td>January 8, 2009</td>
+						<td><a href="./agenda/2009-01.rtf">agenda</a> (RTF 2K)</td>
+						<td><a href="./minutes/2009-01.rtf">minutes</a> (RTF 5K)</td>
+					</tr>
+					<tr>
+						<td>December 11, 2008</td>
+						<td><a href="./agenda/2008-12.rtf">agenda</a> (RTF 1K)</td>
+						<td><a href="./minutes/2008-12.rtf">minutes</a> (RTF 3K)</td>
+					</tr>
+		
+					<tr>
+						<td>November 13, 2008</td>
+						<td><a href="./agenda/2008-11.rtf">agenda</a> (RTF 1K)</td>
+						<td><a href="./minutes/2008-11.rtf">minutes</a> (RTF 4K)</td>
+					</tr>
+		
+					<tr>
+						<td>October 9, 2008</td>
+						<td><a href="./agenda/2008-10.rtf">agenda</a> (RTF 1K)</td>
+						<td><a href="./minutes/2008-10.rtf">minutes</a> (RTF 8K)</td>
+					</tr>
+		
+					<tr>
+						<td>September 11, 2008</td>
+						<td><a href="./agenda/2008-09.rtf">agenda</a> (RTF 1K)</td>
+						<td><a href="./minutes/2008-09.rtf">minutes</a> (RTF 5K)</td>
+					</tr>
+		
+					<tr>
+						<td>August 14, 2008</td>
+						<td><a href="./agenda/2008-08.rtf">agenda</a> (RTF 1K)</td>
+						<td><a href="./minutes/2008-08.rtf">minutes</a> (RTF 5K)</td>
+					</tr>
+		
+					<tr>
+						<td>July 10, 2008</td>
+						<td><a href="./agenda/2008-07.rtf">agenda</a> (RTF 1K)</td>
+						<td>??</td>
+					</tr>
+		
+					<tr>
+						<td>June 12, 2008</td>
+						<td><a href="./agenda/2008-06.rtf">agenda</a> (RTF 1K)</td>
+						<td><a href="./minutes/2008-06.rtf">minutes</a> (RTF 4K)</td>
+					</tr>
+		
+					<tr>
+						<td>May 8, 2008</td>
+						<td><a href="./agenda/2008-05.rtf">agenda</a> (RTF 1K)</td>
+						<td><a href="./minutes/2008-05.rtf">minutes</a> (RTF 4K)</td>
+					</tr>
+		
+					<tr>
+						<td>April 10, 2008</td>
+						<td><a href="./agenda/2008-04.rtf">agenda</a> (RTF 1K)</td>
+						<td><a href="./minutes/2008-04.rtf">minutes</a> (RTF 3K)</td>
+					</tr>
+		
+					<tr>
+						<td>March 13, 2008</td>
+						<td><a href="./agenda/2008-03.rtf">agenda</a> (RTF 1K)</td>
+						<td><a href="./minutes/2008-03.rtf">minutes</a> (RTF 1K)</td>
+					</tr>
+		
+					<tr>
+						<td>February 12, 2008</td>
+						<td><a href="./agenda/2008-02.rtf">agenda</a> (RTF 1K)</td>
+						<td><a href="./minutes/2008-02.rtf">minutes</a> (RTF 4K)</td>
+					</tr>
+					<tr>
+						<td>January 10, 2008</td>
+						<td><a href="./agenda/2008-01.rtf">agenda</a> (RTF 1K)</td>
+						<td><a href="./minutes/2008-01.rtf">minutes</a> (RTF 4K)</td>
+					</tr>
+					<tr>
+						<td>December 13, 2007</td>
+						<td><a href="./agenda/2007-12.rtf">agenda</a> (RTF 1K)</td>
+						<td><a href="./minutes/2007-12.rtf">minutes</a> (RTF 3K)</td>
+					</tr>
+					<tr>
+						<td>November 8, 2007</td>
+						<td><a href="./agenda/2007-11.rtf">agenda</a> (RTF 1K)</td>
+						<td><a href="./minutes/2007-11.rtf">minutes</a> (RTF 3K)</td>
+					</tr>
+					<tr>
+						<td>October 11, 2007</td>
+						<td><a href="./agenda/2007-10.rtf">agenda</a> (RTF 1K)</td>
+						<td><a href="./minutes/2007-10.rtf">minutes</a> (RTF 7K)</td>
+					</tr>
+					<tr>
+						<td>September 13, 2007</td>
+						<td><a href="./agenda/2007-09.rtf">agenda</a> (RTF 1K)</td>
+						<td><a href="./minutes/2007-09.rtf">minutes</a> (RTF 5K)</td>
+					</tr>
+					<tr>
+						<td>August 9, 2007</td>
+						<td>Special Meeting</td>
+						<td><a href="./minutes/2007ArticlesAmendmentMinutes.pdf">minutes</a> (PDF 48K)</td>
+					</tr>
+					<tr>
+						<td>August 9, 2007</td>
+						<td><a href="./agenda/2007-08.rtf">agenda</a> (RTF 1K)</td>
+						<td><a href="./minutes/2007-08.rtf">minutes</a> (RTF 6K)</td>
+					</tr>
+					<tr>
+						<td>July 12, 2007</td>
+						<td><a href="./agenda/2007-07.rtf">agenda</a> (RTF 1K)</td>
+						<td><a href="./minutes/2007-07.rtf">minutes</a> (RTF 5K)</td>
+					</tr>
+					<tr>
+						<td>June 14, 2007</td>
+						<td><a href="./agenda/2007-06.rtf">agenda</a> (RTF 1K)</td>
+						<td><a href="./minutes/2007-06.rtf">minutes</a> (RTF 14K)</td>
+					</tr>
+					<tr>
+						<td>May 10, 2007</td>
+						<td><a href="./agenda/2007-05.rtf">agenda</a> (RTF 1K)</td>
+						<td><a href="./minutes/2007-05.rtf">minutes</a> (RTF 4K)</td>
+					</tr>
+					<tr>
+						<td>April 12, 2007</td>
+						<td><a href="./agenda/2007-04.rtf">agenda</a> (RTF 1K)</td>
+						<td><a href="./minutes/2007-04.rtf">minutes</a> (RTF 6K)</td>
+					</tr>
+					<tr>
+						<td>March 8, 2007</td>
+						<td><a href="./agenda/2007-03.rtf">agenda</a> (RTF 1K)</td>
+						<td><a href="./minutes/2007-03.rtf">minutes</a> (RTF 6K)</td>
+					</tr>
+					<tr>
+						<td>February 8, 2007</td>
+						<td>agenda can be found in the <a href="./newsletter/2007-01.pdf">newsletter</a></td>
+						<td><a href="./minutes/2007-02.rtf">minutes</a> (RTF 5K)</td>
+					</tr>
+					<tr>
+						<td>January 11, 2007</td>
+						<td><a href="./agenda/2007-01.rtf">agenda</a> (RTF 1K)</td>
+						<td><a href="./minutes/2007-01.rtf">minutes</a> (RTF 2K)</td>
+					</tr>
+					<tr>
+						<td>December 14, 2006</td>
+						<td>agenda?</td>
+						<td><a href="./minutes/2006-12.rtf">minutes</a> (RTF 6K)</td>
+					</tr>
+					<tr>
+						<td>November 9, 2006</td>
+						<td><a href="./agenda/2006-11.rtf">agenda</a> (RTF 2K)</td>
+						<td><a href="./minutes/2006-11.rtf">minutes</a> (RTF 7K)</td>
+					</tr>
+					<tr>
+						<td>October 12, 2006</td>
+						<td><a href="./agenda/2006-10.rtf">agenda</a> (RTF 2K)</td>
+						<td><a href="./minutes/2006-10.rtf">minutes</a> (RTF 6K)</td>
+					</tr>
+					<tr>
+						<td>September 14, 2006</td>
+						<td><a href="./agenda/2006-09.rtf">agenda</a> (RTF 2K)</td>
+						<td><a href="./minutes/2006-09.rtf">minutes</a> (RTF 7K)</td>
+					</tr>
+					<tr>
+						<td>August 10, 2006</td>
+						<td><a href="./agenda/2006-08.rtf">agenda</a> (RTF 2K)</td>
+						<td><a href="./minutes/2006-08.rtf">minutes</a> (RTF 7K)</td>
+					</tr>
+					<tr>
+						<td>July 13, 2006</td>
+						<td><a href="./agenda/2006-07.rtf">agenda</a> (RTF 1K)</td>
+						<td><a href="./minutes/2006-07.rtf">minutes</a> (RTF 6K)</td>
+					</tr>
+					<tr>
+						<td>June 8, 2006</td>
+						<td><a href="./agenda/2006-06.rtf">agenda</a> (RTF 1K)</td>
+						<td><a href="./minutes/2006-06.rtf">minutes</a> (RTF 7K)</td>
+					</tr>
+					<tr>
+						<td>May 11, 2006</td>
+						<td><a href="./agenda/2006-05.rtf">agenda</a> (RTF 1K)</td>
+						<td><a href="./minutes/2006-05.rtf">minutes</a> (RTF 7K)</td>
+					</tr>
+					<tr>
+						<td>April 13, 2006</td>
+						<td><a href="./agenda/2006-04.rtf">agenda</a> (RTF 1K)</td>
+						<td>minutes ??</td>
+					</tr>
+					<tr>
+						<td>March 9, 2006</td>
+						<td><a href="./agenda/2006-03.rtf">agenda</a> (RTF 1K)</td>
+						<td><a href="./minutes/2006-03.rtf">minutes</a> (RTF 5K)</td>
+					</tr>
+					<tr>
+						<td>February 2, 2006</td>
+						<td><a href="./agenda/2006-02.rtf">agenda</a> (RTF 1K)</td>
+						<td><a href="./minutes/2006-02.rtf">minutes</a> (RTF 6K)</td>
+					</tr>
+					<tr>
+						<td>January 11, 2006</td>
+						<td><a href="./agenda/2006-01.rtf">agenda</a> (RTF 1K)</td>
+						<td><a href="./minutes/2006-01.rtf">minutes</a> (RTF 6K)</td>
+					</tr>
+					<tr>
+						<td>December 8, 2005</td>
+						<td><a href="./agenda/2005-12.rtf">agenda</a> (RTF 1K)</td>
+						<td><a href="./minutes/2005-12.rtf">minutes</a> (RTF 7K)</td>
+					</tr>
+					<tr>
+						<td>November 10, 2005</td>
+						<td><a href="./agenda/2005-11.rtf">agenda</a> (RTF 1K)</td>
+						<td><a href="./minutes/2005-11.rtf">minutes</a> (RTF 8K)</td>
+					</tr>
+					<tr>
+						<td>October 6, 2005</td>
+						<td><a href="./agenda/2005-10.rtf">agenda</a> (RTF 1K)</td>
+						<td><a href="./minutes/2005-10.rtf">minutes</a> (RTF 8K)</td>
+					</tr>
+					<tr>
+						<td>September 8, 2005</td>
+						<td><a href="./agenda/2005-09.rtf">agenda</a> (RTF 2K)</td>
+						<td><a href="./minutes/2005-09.rtf">minutes</a> (RTF 7K)</td>
+					</tr>
+					<tr>
+						<td>August 4, 2005</td>
+						<td><a href="./agenda/2005-07.rtf">see July</a> (RTF 2K)</td>
+						<td><a href="./minutes/2005-08.rtf">minutes</a> (RTF 7K)</td>
+					</tr>
+					<tr>
+						<td>July 7, 2005</td>
+						<td><a href="./agenda/2005-07.rtf">agenda</a> (RTF 2K)</td>
+						<td><a href="./minutes/2005-07.rtf">minutes</a> (RTF 4K)</td>
+					</tr>
+					<tr>
+						<td>June 9, 2005</td>
+						<td><a href="./agenda/2005-06.rtf">agenda</a> (RTF 1K)</td>
+						<td><a href="./minutes/2005-06.rtf">minutes</a> (RTF 6K)</td>
+					</tr>
+					<tr>
+						<td>May 5, 2005</td>
+						<td><a href="./agenda/2005-05.rtf">agenda</a> (RTF 1K)</td>
+						<td><a href="./minutes/2005-05.rtf">minutes</a> (RTF 8K)</td>
+					</tr>
+					<tr>
+						<td>April 7, 2005</td>
+						<td><a href="./agenda/2005-04.rtf">agenda</a> (RTF 1K)</td>
+						<td><a href="./minutes/2005-04.rtf">minutes</a> (RTF 8K)</td>
+					</tr>
+					<tr>
+						<td>March 10, 2005</td>
+						<td><a href="./agenda/2005-03.rtf">agenda</a> (RTF 1K)</td>
+						<td><a href="./minutes/2005-03.rtf">minutes</a> (RTF 7K)</td>
+					</tr>
+					<tr>
+						<td>February 10, 2005</td>
+						<td><a href="./agenda/2005-02.rtf">agenda</a> (RTF 1K)</td>
+						<td><a href="./minutes/2005-02.rtf">minutes</a> (RTF 2K)</td>
+					</tr>
+					<tr>
+						<td>January 6, 2005</td>
+						<td><a href="./agenda/2005-01.rtf">agenda</a> (RTF 1K)</td>
+						<td><a href="./minutes/2005-01.rtf">minutes</a> (RTF 2K)</td>
+					</tr>
+					<tr>
+						<td>December 9, 2004</td>
+						<td><a href="./agenda/2004-12.rtf">agenda</a> (RTF 2K)</td>
+						<td><a href="./minutes/2004-12.rtf">minutes</a> (RTF 8K)</td>
+					</tr>
+					<tr>
+						<td>November 4, 2004</td>
+						<td><a href="./agenda/2004-11.rtf">agenda</a> (RTF 2K)</td>
+						<td><a href="./minutes/2004-11.rtf">minutes</a> (RTF 9K)</td>
+					</tr>
+					<tr>
+						<td>October 7, 2004</td>
+						<td><a href="./agenda/2004-10.rtf">agenda</a> (RTF 1K)</td>
+						<td><a href="./minutes/2004-10.rtf">minutes</a> (RTF 10K)</td>
+					</tr>
+					<tr>
+						<td>September 9, 2004</td>
+						<td><a href="./agenda/2004-09.rtf">agenda</a> (RTF 1K)</td>
+						<td><a href="./minutes/2004-09.rtf">minutes</a> (RTF 10K)</td>
+					</tr>
+					<tr>
+						<td>August, 2004</td>
+						<td>No Meeting</td>
+						<td></td>
+					</tr>
+					<tr>
+						<td>July, 2004</td>
+						<td>No Meeting</td>
+						<td></td>
+					</tr>
+					<tr>
+						<td>June 10, 2004</td>
+						<td><a href="./agenda/2004-06.rtf">agenda</a> (RTF 1K)</td>
+						<td><a href="./minutes/2004-06.rtf">minutes</a> (RTF 6K)</td>
+					</tr>
+					<tr>
+						<td>May 6, 2004</td>
+						<td><a href="./agenda/2004-05.rtf">agenda</a> (RTF 2K)</td>
+						<td><a href="./minutes/2004-05.rtf">minutes</a> (RTF 2K)</td>
+					</tr>
+					<tr>
+						<td>April 8, 2004</td>
+						<td><a href="./agenda/2004-04.rtf">agenda</a> (RTF 2K)</td>
+						<td><a href="./minutes/2004-04.rtf">minutes</a> (RTF 2K)</td>
+					</tr>
+					<tr>
+						<td>March 4, 2004</td>
+						<td><a href="./agenda/2004-03.rtf">agenda</a> (RTF 2K)</td>
+						<td><a href="./minutes/2004-03.rtf">minutes</a> (RTF 9K)</td>
+					</tr>
+					<tr>
+						<td>February 5, 2004</td>
+						<td><a href="./minutes/2004-Budget.rtf">budget</a> (RTF 5K)</td>
+						<td><a href="./minutes/2004-02.rtf">minutes</a> (RTF 6K)</td>
+					</tr>
+					<tr>
+						<td>January 8, 2004</td>
+						<td><a href="./agenda/2004-01.rtf">agenda</a> (RTF 2K)</td>
+						<td><a href="./minutes/2004-01.rtf">minutes</a> (RTF 7K)</td>
+					</tr>
+					<tr>
+						<td>December 11, 2003</td>
+						<td><a href="./agenda/2003-12.rtf">agenda</a> (RTF 1K)</td>
+						<td><a href="./minutes/2003-12.rtf">minutes</a> (RTF 7K)</td>
+					</tr>
+				</tbody>
+			</table>
+		</div>
+					
+		<div class="well">
+			<p>
+				Copyright&copy; 2003-2014, The Association of Powell Place Home Owners, Powell, OH 43065
+			</p>
+		</div>
+	</div>
+	
+	<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.0/jquery.min.js"></script>
+	<script src="//netdna.bootstrapcdn.com/bootstrap/3.1.1/js/bootstrap.min.js"></script>
+</body>
+</html>

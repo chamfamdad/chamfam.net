@@ -1,0 +1,121 @@
+<!DOCTYPE html>
+
+<html lang="en">
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="description" content="Website of the Association of Powell Place Home Owners">
+    <meta name="author" content="APPHO">
+
+    <title>Powell Place - FAQ</title>
+    
+	<link rel="stylesheet" href="//netdna.bootstrapcdn.com/bootstrap/3.1.1/css/bootstrap.min.css">
+	<link rel="stylesheet" href="//netdna.bootstrapcdn.com/bootstrap/3.1.1/css/bootstrap-theme.min.css">
+
+    <!-- HTML5 shim and Respond.js IE8 support of HTML5 elements and media queries -->
+    <!--[if lt IE 9]>
+      <script src="https://oss.maxcdn.com/libs/html5shiv/3.7.0/html5shiv.js"></script>
+      <script src="https://oss.maxcdn.com/libs/respond.js/1.4.2/respond.min.js"></script>
+    <![endif]-->
+</head>
+<body role="document">
+
+	<?php
+		$page = "faq";
+		include( 'navbar.php' ); 
+	?>
+	<div class="container" role="main">
+		<div class="jumbotron">
+			<h1>Frequently Asked Questions</h1>
+		</div>
+		
+		<h2 class="sub-header">Who is Clayman Property Services?</h2>
+		<p>
+			The Association of Powell Place Home Owners has reached an agreement and retained the Services of Clayman Property Services.
+		</p>
+		<p>
+			Clayman Property Services will be able to help manage the bookkeeping, expenses, billing, and collections of dues as well as
+			a host of other duties.
+		</p>
+		<p>
+			Clayman Property Services<br />
+			6724 Perimeter Loop Road<br />
+			PMB 319<br />
+			Dublin, OH 43017<br />
+			614-842-1922<br/>
+			<a href="http://www.claymanpropertyservices.com">www.claymanpropertyservices.com</a>
+		</p>
+
+		<h2 class="sub-header">Why do we pay dues?</h2>
+		<p>
+			The Association of Powell Place Home Owners depends solely on dues from member homeowners for all its
+			operational funds.  The single largest expense is for lawn care around the entrances and the pond.
+			The pond is the next largest expense.  Money is spent on electricity and maintenance of the pump.
+		</p>
+
+		<h2 class="sub-header">When are we billed for dues?</h2>
+		<p>
+			Homeowners should expect a bill for dues sometime in February after the annual meeting.  Prompt
+			payment of your homeowner's fees is appreciated and minimizes any consternation for both the
+			association board and the property owner.  Questions regarding your homeowner's association dues
+			or account status may be directed to Clayman Property Services.
+		</p>
+		<p>
+			<a href="http://www.powellplace.org/files/Policies/PP%20Collections%20Policy%2011-08-2012.pdf">Click here for a copy of the collection policy</a> (PDF 58K).
+		</p>
+
+		<h2 class="sub-header">What is architectural review?</h2>
+		<p>
+			All architectural changes that are covered under your home's covenants (you should have received these when
+			you bought your home; or you can view these <a href="information.php">here</a>) need to be reviewed
+			and approved by the Association. The city will not grant a permit without a preliminary approval from the Association. 
+			Please contact Clayman Property Services if you have any proposed changes or additions i.e. including but not limited 
+			to installing fences, changes in paint coloring of the home, patios, decks, etc.
+		</p>
+
+		<h2 class="sub-header">Can I write an article for the newsletter?</h2>
+		<p>
+			The Association accepts short articles and notices for publication in the newsletter from members.  The Association
+			Board reserves the right to review, reject, and edit all material and cannot guarantee publication or accuracy.
+			Submit your information to anyone serving on the board.
+		</p>
+
+		<h2 class="sub-header">Can I water my lawn?</h2>
+		<p>
+			<a href="http://www.delcowater.com">Del-Co Water Company</a> sets the watering restrictions.  For the past few years there have
+			been watering restrictions.  Please check Del-Co Water's web site for more information.
+		</p>
+
+		<h2 class="sub-header">Where can I recycle?</h2>
+		<p>
+			The <a href="http://www.cityofpowell.us/">City of Powell</a> has contracted with Rumpke for curb side recycling pickup.  Please see
+			Rumpke's web site for <a href="http://www.rumpke.com/Recycling/FAQ.asp">more information</a>.
+		</p>
+		
+		<h2 class="sub-header">Pets</h2>
+		<p>
+			The APPHO Board of Trustees has received several complaints about stray
+			cats and dogs running loose through the neighborhood. While the homeowners association does not
+			have the authority to monitor or manage stray animals in the neighborhood they have been in contact with the
+			City of Powell and the Delaware county dog warden.  They have suggested that we contact them directly if we
+			encounter pets that are roaming free.
+		</p>
+		<p>
+			The Powell police department may be contacted by phone using their nonemergency telephone number of 614-885-3374.
+		</p>
+		<p>
+			The dog warden may be contacted by phone at 740-368-1915 or by email at <a href="mailto:dogwarden@co.delaware.oh.us">dogwarden@co.delaware.oh.us</a>
+		</p>
+			
+		<div class="well">
+			<p>
+				Copyright&copy; 2003-2014, The Association of Powell Place Home Owners, Powell, OH 43065
+			</p>
+		</div>
+	</div>
+	
+	<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.0/jquery.min.js"></script>
+	<script src="//netdna.bootstrapcdn.com/bootstrap/3.1.1/js/bootstrap.min.js"></script>
+</body>
+</html>
