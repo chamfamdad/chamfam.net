@@ -1,0 +1,74 @@
+<!DOCTYPE HTML>
+<html>
+<head>
+	<meta charset="utf-8">
+	<title>Math Facts</title>
+	<style>
+		td, input{ text-align: right; font-size: 2em; }
+	</style>
+</head>
+<body>
+
+<h1>Multiplication</h1>
+<table>
+	<tr><td id="top"></td></tr>
+	<tr><td id="bottom"></td></tr>
+	<tr><td><input type="text" id="answer" size="2"/></td></tr>
+</table>
+
+<script src="https://code.jquery.com/jquery-1.11.1.js"></script>
+<script src="jquery.color-2.1.2.min.js"></script>
+<script type="text/javascript">
+	(function(){
+		var top, bottom, answer;
+		
+		function random()
+		{
+			return Math.round( Math.random( 10 ) * 10 );
+		}
+		
+		function validate()
+		{
+			var attempt = $( "#answer" ).val();
+			
+			if( attempt == answer )
+			{
+				blink();
+				reset();
+			}
+		}
+		
+		function blink()
+		{
+			var in$ = $( "#answer" );
+			
+			in$.animate( {backgroundColor: "#0f0"}, 100 )
+			.delay( 100 )
+			.animate( {backgroundColor: "#fff"}, 100 )
+			.delay( 100 )
+			.animate( {backgroundColor: "#0f0"}, 100 )
+			.delay( 100 )
+			.animate( {backgroundColor: "#fff"}, 100 );
+		}
+		
+		function reset()
+		{
+			top = random();
+			bottom = random();
+			answer = top * bottom;
+			$( "#top" ).html( top );
+			$( "#bottom" ).html( bottom );
+			$( "#answer" ).val( "" ).focus();
+		}
+		
+		function onDocumentReady()
+		{
+			$( "#answer" ).on( "change", validate );
+			reset();
+		}
+		
+		$( document ).ready( onDocumentReady );
+	})();
+</script>
+</body>
+</html>
