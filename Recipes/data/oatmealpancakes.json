@@ -1,0 +1,21 @@
+{
+  "name": "Oatmeal Pancakes",
+  "ingredients": [
+    	"1 cup whole wheat flour",
+    	"1 cup oatmeal",
+    	"1 teaspoon baking powder",
+    	"1 teaspoon cinnamon",
+    	"1 cup applesauce",
+    	"1 cup ripe bananas",
+    	"1 teaspoon vanilla",
+    	"2 eggs",
+    	"1 1/2 cups milk"
+    ],
+  "instructions": [
+      "Stir dry ingredients together in a large bowl.",
+      "Add wet ingredients and stir well.",
+      "Cook on a hot griddle."
+    ],
+  "yield": "About 16, 4 inch round pancakes",
+  "source": "Me"
+}

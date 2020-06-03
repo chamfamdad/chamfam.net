@@ -1,0 +1,20 @@
+{
+  "name": "Pizza Dough",
+  "ingredients": [
+      "3 cups flour",
+      "1 Tablespoon yeast (or one package)",
+      "1 Tablespoon sugar",
+      "1 teaspoon salt",
+      "2 cups warm water",
+      "3 Tablespoons vegetable oil",
+      "enough flour to make the dough not sticky, could be another 2 to 3 cups."
+    ],
+  "instructions": [
+      "Place flour, yeast, sugar, and salt into a mixing bowl.",
+      "Slowly add water and oil and mix.",
+      "Continuing adding flour until the dough is manageable.",
+      "Spread on a buttered cookie sheet."
+    ],
+  "yield": "2 cookie sheet sized pizza doughs",
+  "source": "Evolved over the years"
+}

@@ -1,0 +1,57 @@
+{
+  "name": "Poblano Chicken Chowder",
+  "ingredients": [
+      "1/4 cup olive oil",
+      "3 large carrots, peeled and diced in 1/2 inch pieces",
+      "2 large onions, peeled and diced in 1/2 inch pieces",
+      "5 celery stalks, trimmed and sliced in 1/2 inch pieces",
+      "1/8 cup minced garlic",
+      "2 to 3 small poblano peppers, stemmed, seeded, and diced in 1/2 inch pieces",
+      "1/4 teaspoon cumin",
+      "1/2 teaspoon white pepper",
+      "1 teaspoon salt",
+      "1/4 teaspoon thyme",
+      "1 tablesppon granulated chicken base",
+      "3 quarts chicken broth",
+      "1/2 bunch cilantro",
+      "Roux (see below)",
+      "1/2 teaspoon red hot sauce",
+      "1 cup heavy whipping cream",
+      "1 pound diced grilled chicken breast"
+    ],
+  "other":[
+      {
+        "name": "Soup",
+        "ol": [
+          "Heat oil in large stockpot over medium heat.",
+          "Add carrots, onions, celery, garlic, poblanos, cumin, white pepper, salt, and thyme.",
+          "Saute 7 to 8 minutes or until carrots are tender.",
+          "Add chicken broth and continue to heat."
+          ]
+      },
+      {
+        "name": "Roux",
+        "ol": [
+          "Melt butter in large skillet over medium heat.",
+          "Add flour and stir to combine.",
+          "Cook, stirring frequently, 3 to 4 minutes to cook flour.  Do not allow roux to brown.",
+          "Add 1 to 3 cups hot liquid from stockpot by cupfuls into roux, whisking continuously to incorporate.",
+          "Pour back into stockpot, whisking to blend.",
+          "Stirring frequently, cook 3 to 5 minutes or until mixture begins to thicken.",
+          "Remove from heat.",
+          "Stir in hot sauce.",
+          "Stir in cream and chicken."
+          ]
+      },
+      {
+        "name": "Comments",
+        "p": [
+          "Don't worry about how much chicken broth or bullion, just use water and then add as much bullion as needed to taste.",
+          "You also don't have to bother to grill the chicken.  Just throw it in the soup and let it boil.",
+          "No cream? No problem.  Use less water and stir in milk instead."
+          ]
+      }
+    ],
+  "yield": "4 to 5 quarts",
+  "source": "Aunt Lydia"
+}

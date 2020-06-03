@@ -1,0 +1,22 @@
+{
+  "name": "Whole Wheat Pancakes",
+  "ingredients": [
+      "1 cup milk",
+      "1 cup whole wheat",
+      "2 eggs",
+      "1/4 cup oil",
+      "2 tablespoons brown sugar",
+      "1/2 teaspoon salt",
+      "1/2 teaspoon baking soda",
+      "2 teaspoons baking powder"
+    ],
+  "instructions": [
+      "Place whole wheat and milk into blender.",
+      "Grind on high for 3 to 4 minutes.",
+      "Reduce to medium speed.",
+      "add remaining ingredients and continue blending for 2 minutes",
+      "Pour 1/4 cup batter for each pancake onto preheated griddle, turning when bubbles form and break in middle of pancake."
+    ],
+  "yield": "about 12 pancakes",
+  "source": "Aunt Martha"
+}

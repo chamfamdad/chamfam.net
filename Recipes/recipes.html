@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" href="http://maxcdn.bootstrapcdn.com/bootstrap/3.2.0/css/bootstrap.min.css">
+    <title>Recipes</title>
+    <!-- HTML5 shim and Respond.js for IE8 support of HTML5 elements and media queries -->
+    <!--[if lt IE 9]>
+      <script src="https://oss.maxcdn.com/html5shiv/3.7.2/html5shiv.min.js"></script>
+      <script src="https://oss.maxcdn.com/respond/1.4.2/respond.min.js"></script>
+    <![endif]-->
+  </head>
+
+  <body>
+    
+    <div class="container">
+      <div class="page-header">
+        <h1>Family Favorites</h1>
+      
+        <ol class="breadcrumb">
+          <li><a href="/">Home</a></li>
+          <li class="active">Recipes</li>
+        </ol>
+
+        <p>
+        	We have had a few incidents recently where we couldn't find a recipe that we use all the time so I thought
+        	it would be real easy to just put them on the web, so we always know where they are.  Here are some of the
+        	recipes we use often (or don't want to lose).
+        </p>
+      </div>
+
+      <ul id="recipes">
+      </ul>
+    </div>
+    
+    <footer id="footer">
+    </footer>
+    
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.1/jquery.min.js"></script>
+    <script src="http://maxcdn.bootstrapcdn.com/bootstrap/3.2.0/js/bootstrap.min.js"></script>
+    <script src="/js/chamfam.js"></script>
+    <script type="text/javascript">
+      (function( $, document, window, undefined ){
+        var ul = $( "#recipes" );
+        
+        ul.empty();
+        
+        function onRecipe( sLink ){
+          return function( data ){
+            ul.append( "<li><a href=\"recipe.html?" + sLink + "\">" + data.name + "</a></li>" );
+          }
+        }
+        
+        $.getJSON( "data/index.json" )
+          .done( function( data ){
+            var sLink;  
+            var i;
+            
+            for( i = 0 ; i < data.length ; i++ ){
+              sLink = data[i];
+              
+              $.getJSON( "data/" + sLink + ".json" )
+                .done( onRecipe( sLink ) )
+                .fail( function( jqxhr, textStatus, error ){
+                  ul.append( "<li class=\"alert alert-danger\">Request Failed: " + textStatus + ", " + error + "</li>" );
+                });
+            }
+          })
+          .fail( function( jqxhr, textStatus, error ){
+            ul.append( "<li class=\"alert alert-danger\">Request Failed: " + textStatus + ", " + error + "</li>" );
+          });
+
+      })( jQuery, document, window );
+    </script>
+  </body>
+</html>

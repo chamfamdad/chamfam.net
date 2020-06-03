@@ -1,0 +1,43 @@
+{
+  "name": "Pumpkin Cookies",
+  "ingredients": [
+      "1 cup sugar",
+      "1 cup canned pumpkin",
+      "1/2 cup shortening",
+      "1 tablespoon grated orange peel",
+      "2 cups flour",
+      "1 teaspoon baking powder",
+      "1 teaspoon baking soda",
+      "1 teaspoon cinnamon",
+      "1 teaspoon salt",
+      "1/2 cup raisins",
+      "1/2 cup chopped nuts"
+    ],
+  "instructions": [
+      "Mix sugar, pumpkin, shortening, and orange peel.",
+      "Stir in dry ingredients.",
+      "Stir in nuts and raisins.",
+      "Drop by teaspoon onto greased cookie sheet.",
+      "Bake 8-10 minutes at 375 degrees.",
+      "Remove immediately from sheet and cool.",
+      "Spread with brown glaze."
+    ],
+  "other": [
+    {
+      "name": "Light Brown Glaze",
+      "ul": [
+          "1/4 cup margarine",
+          "2 cups powdered sugar",
+          "1 teaspoon vanilla",
+          "1 to 2 tablespoons milk"
+        ],
+      "ol": [
+        "Melt margarine over medium heat until delicate brown.",
+        "Stir in powdered sugar.",
+        "Add vanilla and milk (one tablespoon at a time) until smooth."
+        ]
+    }
+    ],
+  "yield": "about 3 dozen",
+  "source": "Kathy Hatch's Relief Society's Favorite Pumpkin Recipes"
+}

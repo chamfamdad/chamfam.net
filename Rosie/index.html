@@ -1,0 +1,132 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+   <meta charset="utf-8">
+   <title>Palindromes</title>
+   <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.4/css/bootstrap.min.css">
+   <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.4/css/bootstrap-theme.min.css">
+</head>
+
+<body>
+   <div class="container">
+      <div class="jumbotron center">
+         <h1>Palindromes</h1>
+         <p>A palindrome is a word, phrase, number, or other sequence of characters which reads the same backward or forward. <small>Allowances may be made for adjustments to capital letters, punctuation, and word dividers.</small></p>
+      </div>
+
+      <div class="panel panel-default">
+         <div class="panel-heading">
+            <h2>Time</h2>
+         </div>
+         <div class="panel-body">
+            <div class="col-sm-3 col-sm-offset-3">
+               <h3>Current Time</h3>
+               <span id="counter"></span>
+            </div>
+            <div class="col-sm-3">
+               <h3>Palindromes</h3>
+               <ul id="palindromes"></ul>
+            </div>
+         </div>
+      </div>
+
+      <div class="panel panel-default">
+         <div class="panel-heading">
+            <h2>Text</h2>
+         </div>
+         <div class="panel-body">
+            <div class="form-group has-feedback has-success">
+               <label class="control-label sr-only" for="testtext">Type or Paste Text</label>
+               <input type=text class="form-control" id="testtext" placeholder="Type or paste your text here." />
+               <span class="glyphicon glyphicon-ok form-control-feedback"></span>
+            </div>
+         </div>
+      </div>
+   </div>
+
+   <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.2/jquery.min.js"></script>
+   <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.4/js/bootstrap.min.js"></script>
+   <script type="text/javascript">
+      (function ($, window, document, undefined) {
+         var sMostRecent = "";
+
+         function updateClock() {
+            var div = document.getElementById("counter");
+            var now = new Date(Date.now());
+            var sTime = formatTime(now);
+            div.innerHTML = sTime;
+
+            if (isPalindrome(sTime) && sTime != sMostRecent) {
+               $("#palindromes").append("<li>" + sTime + "</li>");
+            } else if (now.getMonth() == "2" && now.getDate() == "14" && sTime == "9:26:53" && sTime != sMostRecent) {
+               $("#palindromes").append("<li>Happy Pi Time: 3/14/15 9:26:53</li>");
+            }
+
+            sMostRecent = sTime;
+         }
+
+         function isPalindrome(sValue) {
+            sForward = sValue.toLowerCase().replace(/[^a-z0-9]/g, '');
+            sBackward = sForward.split('').reverse().join('');
+
+            return sForward === sBackward;
+         }
+
+         function formatTime(date) {
+            var sTime = "";
+            var hours = date.getHours();
+            var minutes = date.getMinutes();
+            var seconds = date.getSeconds();
+
+            if (hours > 12) {
+               hours -= 12;
+            }
+
+            sTime += hours.toString() + ":";
+
+            if (minutes < 10) {
+               sTime += "0" + minutes;
+            } else {
+               sTime += minutes.toString();
+            }
+
+            sTime += ":";
+
+            if (seconds < 10) {
+               sTime += "0" + seconds;
+            } else {
+               sTime += seconds.toString();
+            }
+
+            return sTime;
+         }
+
+         function onTestTextChange(event) {
+            var $text = $("#testtext");
+            var sText = $text.val();
+            var $div = $(event.target).closest("div");
+            var $icon = $div.find("span");
+
+            if (isPalindrome(sText)) {
+               $div.removeClass("has-error");
+               $div.addClass("has-success");
+               $icon.removeClass("glyphicon-remove");
+               $icon.addClass("glyphicon-ok");
+            } else {
+               $div.removeClass("has-success");
+               $div.addClass("has-error");
+               $icon.removeClass("glyphicon-ok");
+               $icon.addClass("glyphicon-remove");
+            }
+         }
+
+         $(document).ready(function () {
+            window.setInterval(updateClock, 500);
+            $("#testtext").on("keyup", onTestTextChange);
+         })
+      })(jQuery, window, document);
+   </script>
+</body>
+
+</html>

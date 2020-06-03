@@ -1,0 +1,19 @@
+{
+  "name": "Waffles",
+  "ingredients": [
+      "1 cup flour",
+      "1/2 teaspoon salt",
+      "2 teaspoons baking powder",
+      "3 tablespoons sugar",
+      "2 eggs, separated",
+      "1 cup milk",
+      "2 tablespoons melted butter"
+    ],
+  "instructions": [
+      "Sift flour, salt, baking powder, and sugar.",
+      "Add egg yolks and milk and beat to make a smotth batter.",
+      "Stir in the melted butter, and at the last minute, fold in stiffly beaten egg whites.",
+      "Bake in hot, well greased waffle iron."
+    ],
+  "yield": "about 4 waffles"
+}

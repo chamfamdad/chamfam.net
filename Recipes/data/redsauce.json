@@ -1,0 +1,26 @@
+{
+  "name": "Red Sauce",
+  "ingredients": [
+      "1/2 to 3/4 cup olive oil (get the best you can afford)",
+      "3-4 cloves minced garlic",
+      "1/2 to 1 teaspoon crushed red pepper",
+      "1 - 2 teaspoons basil",
+      "1 large can tomato sauce (29 oz)"
+    ],
+  "instructions": [
+    "Place olive oil and garlic in a medium sized sauce pan.",
+    "Heat until garlic is golden (but don't burn it!).",
+    "Add tomato sauce, red pepper, and basil.",
+    "Simmer for as long as you can (minimum one hour)."
+    ],
+  "other": { 
+      "name": "Optional",
+      "ul": [
+          "1 chopped onion",
+          "1 egg (just crack it and stir it in)",
+          "1 beef bullion cube"
+        ]
+    },
+  "yield": "Enough sauce for a pound of pasta, or 8 calzone.",
+  "source": "Italy Rome Mission, 1987-1989."
+}
