@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html>
+
+	<head>
+	</head>
+
+	<body>
+		<header>
+			<h1>Scripture Mastery</h1>
+			<h2>Let thy soul delight in the scriptures</h2>
+		</header>
+		<nav>
+		</nav>
+		<section id="scripture">
+		</section>
+		<footer>
+			<a href="mailto:fletcher@chamfam.net">Fletcher Chambers</a>
+		</footer>
+	</body>
+
+	<script src="./lib/jquery-1.7.1/jquery-1.7.1.js"></script>	
+	<script src="./data/NewTestament.js"></script>
+	<script>
+	
+		function showScripture( event )
+		{
+			var id = event.target.id;
+			var section = $( "#scripture" );
+			var scripture = nt[index];
+			
+			section.empty();
+			
+			section.append( "<h3>" + scripture.reference + "</h3>" );
+			section.append( "<p>" + scripture.text + "</p>" );
+		}
+		
+		function fillNav()
+		{
+			var i = 0;
+			var nav = $( "nav" );
+			
+			nav.append( "<ul>" );
+			
+			for( i = 0 ; i < nt.length ; i++ )
+			{
+				nav.append( "<li><a id=\"nt_" + i + "\" class=\"reference\">" + nt[i].reference + "</a></li>" );
+			}
+			
+			nav.append( "</ul>" );
+		}
+		
+		function onDocumentReady()
+		{
+			fillNav();
+		}
+		
+		$( document ).ready( onDocumentReady );
+	</script>
+
+</html>

@@ -1,0 +1,311 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<mx:Canvas xmlns:mx="http://www.adobe.com/2006/mxml"
+	width="600" height="400">
+	
+	<mx:Script>
+		<![CDATA[
+			
+		import flash.events.Event;
+		import flash.events.MouseEvent;
+		import mx.containers.HBox;
+		import mx.containers.VBox;
+		import mx.controls.Button;
+		import mx.controls.Text;
+		import mx.events.ListEvent;
+		import net.chamfam.classes.Participant;
+		import net.chamfam.classes.Heat;
+		
+		import mx.controls.Alert;
+			
+		private var _aParticipants:Array = new Array();
+		[Bindable] private var _aHeats:Array = new Array();
+		
+		public function clear():void
+		{
+			_aHeats = new Array();
+			_aParticipants = new Array();
+		}
+		
+		public function addName( name:String ):void
+		{
+			var participant:Participant = new Participant();
+			
+			participant.name = name;
+			
+			_aParticipants.push( participant );
+		}
+		
+		public function startRace():void
+		{
+			for ( var i:int = 0 ; i < _aParticipants.length ; i++ )
+			{
+				_aParticipants[i].id = i;
+			}
+			
+			_aHeats = new Array();
+			
+			// now build it up again
+			var numEventTeams:int = _aParticipants.length;
+			var bOdd:Boolean = false;
+			  
+			if( numEventTeams % 2 != 0 )
+			{
+				numEventTeams += 1;
+				bOdd = true;
+			}
+			
+			var currentRound:int;
+			var currentGame:int;
+			var homeIndex:int;
+			var awayIndex:int;
+			var h:Heat;
+
+			for( currentRound = 1; currentRound < numEventTeams; currentRound++ ) 
+			{
+				for ( currentGame = 1; currentGame <= numEventTeams / 2; currentGame++ ) 
+				{
+					homeIndex = getHomeIndex( numEventTeams, currentRound, currentGame );
+					awayIndex = getAwayIndex( numEventTeams, currentRound, currentGame );
+
+					if ( !(bOdd && (homeIndex == numEventTeams - 1 || awayIndex == numEventTeams - 1)) )
+					{
+						h = new Heat();
+						
+						h.lane1 = _aParticipants[homeIndex];
+						h.lane2 = _aParticipants[awayIndex];
+						
+						_aHeats.push( h );
+					}
+				}
+			}
+
+			// now set up everyone to race in the opposite lanes
+			for( currentRound = 1; currentRound < numEventTeams; currentRound++ ) 
+			{
+				for ( currentGame = 1; currentGame <= numEventTeams / 2; currentGame++ ) 
+				{
+					homeIndex = getHomeIndex( numEventTeams, currentRound, currentGame );
+					awayIndex = getAwayIndex( numEventTeams, currentRound, currentGame );
+
+					if ( !(bOdd && (homeIndex == numEventTeams - 1 || awayIndex == numEventTeams - 1)) )
+					{
+						h = new Heat();
+						
+						h.lane1 = _aParticipants[awayIndex];
+						h.lane2 = _aParticipants[homeIndex];
+						
+						_aHeats.push( h );
+					}
+				}
+			}
+		}
+		
+		/**
+		 * 
+		 * @author Fletcher Chambers
+		 */
+		private function getHomeIndex( numteams:int, round:int, game:int ):int
+		{
+			return game == 1 ? 0 : ( round + game - 2 ) % ( numteams - 1 ) + 1;
+		}
+		
+		/**
+		 * 
+		 * @author Fletcher Chambers
+		 */
+		private function getAwayIndex( numteams:int, round:int, game:int ):int
+		{
+			return ( numteams - 1 + round - game ) % ( numteams - 1 ) + 1;
+		}
+
+		private function numWins( id:int ):int
+		{
+			var num:int = 0;
+			
+			for ( var i:int = 0 ; i < _aHeats.length ; i++ )
+			{
+				if ( _aHeats[i].winner.id == id )
+				{
+					num++;
+				}
+			}
+			
+			return num;
+		}
+		
+		private function getHistory( part:Participant ):String
+		{
+			var i:int;
+			var output:String = new String;
+			
+			output = "Viewing history for: " + part.name;
+			output += "\n\n";
+			
+			// show wins first
+			output += "Won Against\n";
+			
+			for ( i = 0 ; i < _aHeats.length ; i++ )
+			{
+				if ( _aHeats[i].winner.id == part.id )
+				{
+					output += "\t";
+					
+					if ( _aHeats[i].lane1.id != part.id )
+					{
+						output += _aHeats[i].lane1.name;
+					}
+					else
+					{
+						output += _aHeats[i].lane2.name;
+					}
+					output += "\n";
+				}
+			}
+			
+			// now losses
+			output += "\nLost To\n";
+			
+			for ( i = 0 ; i < _aHeats.length ; i++ )
+			{
+				if ( (_aHeats[i].lane1.id == part.id || _aHeats[i].lane2.id == part.id) && _aHeats[i].winner.id != part.id )
+				{
+					output += "\t";
+					
+					if ( _aHeats[i].lane1.id != part.id )
+					{
+						output += _aHeats[i].lane1.name;
+					}
+					else
+					{
+						output += _aHeats[i].lane2.name;
+					}
+					output += "\n";
+				}
+			}
+			
+			return output;
+		}
+
+		
+		private function onHistoryClick( event:MouseEvent ):void
+		{
+			var part:Participant = event.target.data as Participant;
+						
+			Alert.show( getHistory( part ) );
+		}
+		
+		private function onDataGridItemClick( event:ListEvent ):void
+		{
+			switch( event.columnIndex )
+			{
+				case 0:
+					_aHeats[event.rowIndex].winner = _aHeats[event.rowIndex].lane1;
+					break;
+					
+				case 1:
+					_aHeats[event.rowIndex].winner = _aHeats[event.rowIndex].lane2;
+					break;
+					
+				case 2:
+					_aHeats[event.rowIndex].winner = null;
+					break;
+			}
+			
+			if ( event.columnIndex < 2 && event.target.selectedIndex < _aHeats.length - 1 )
+			{
+				event.target.selectedIndex++;
+			}
+			
+			event.target.invalidateList();
+		}
+
+		public function calculateResults( box:VBox ):void
+		{
+			box.removeAllChildren();
+
+			// count the wins
+			for ( var i:int = 0 ; i < _aParticipants.length ; i++ )
+			{
+				_aParticipants[i].numWins = numWins( _aParticipants[i].id );
+			}
+			
+			_aParticipants.sort( sortParticipants );
+			
+			// now display
+			for ( i = 0 ; i < _aParticipants.length ; i++ )
+			{
+				var h:HBox = new HBox();
+				var txt:Text = new Text();
+				
+				txt.text = _aParticipants[i].name + " won " + _aParticipants[i].numWins;
+				txt.setStyle( "fontSize", 14 );
+
+				var but:Button = new Button();
+				
+				but.label = "View History";
+				but.data = _aParticipants[i];
+				but.addEventListener( MouseEvent.CLICK, onHistoryClick );
+				
+				h.addChild( but );
+				h.addChild( txt );
+				
+				box.addChild( h );
+			}
+		}
+		
+		private function sortParticipants( a:Participant, b:Participant ):int
+		{
+			if ( a.numWins < b.numWins )
+			{
+				return 1
+			}
+			else if ( a.numWins > b.numWins )
+			{
+				return -1;
+			}
+			
+			return 0;
+		}
+		
+		]]>
+	</mx:Script>
+	
+	<mx:DataGrid 
+		dataProvider="{_aHeats}" 
+		width="100%" height="100%"
+		itemClick="onDataGridItemClick( event )"
+		useRollOver="false"
+		variableRowHeight="true" 
+		>
+		<mx:columns>
+			<mx:DataGridColumn headerText="Lane 1" textAlign="center">
+				<mx:itemRenderer>
+					<mx:Component>
+						<mx:VBox paddingTop="5" paddingBottom="5" horizontalAlign="center">
+							<mx:Button label="{data.lane1.name}" fontSize="14"/>
+						</mx:VBox>
+					</mx:Component>
+				</mx:itemRenderer>
+			</mx:DataGridColumn>
+			<mx:DataGridColumn headerText="Lane 2" textAlign="center">
+				<mx:itemRenderer>
+					<mx:Component>
+						<mx:VBox paddingTop="5" paddingBottom="5" horizontalAlign="center">
+							<mx:Button label="{data.lane2.name}" fontSize="14"/>
+						</mx:VBox>
+					</mx:Component>
+				</mx:itemRenderer>
+			</mx:DataGridColumn>
+			<mx:DataGridColumn headerText="Winner" textAlign="center">
+				<mx:itemRenderer>
+					<mx:Component>
+						<mx:VBox paddingTop="5" paddingBottom="5" horizontalAlign="center">
+							<mx:Text text="{data.winner.name}" fontSize="14"/>
+						</mx:VBox>
+					</mx:Component>
+				</mx:itemRenderer>
+			</mx:DataGridColumn>
+		</mx:columns>
+	</mx:DataGrid>
+	
+</mx:Canvas>

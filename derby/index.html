@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+	<meta charset="utf-8"/>
+	<title>jsDerby</title>
+</head>
+
+<body>
+	
+	<section id="jsDerby">
+		<header>
+			<h1>jsDerby 0.1</h1>
+		</header>
+		
+		<section id="addParticipants">
+			<h2>Add Participants</h2>
+			<label for="name">Name: </label><input id="name" type="text" placeholder="type name here" autofocus />
+			<button id="addParticipant">Add</button>
+  		</section>
+		
+		<section>
+			<ul id="participants"></ul>
+		</section>
+			
+		<section id="heats">
+		</section>
+		
+		<footer>
+			<p>Copyright 2013, Fletcher Chambers.  All rights reserved.</p>
+		</footer>
+	</section>
+	
+	<script type="text/template" id="participant-template">
+		<%= name %> <button class="destroy">Delete</button>
+	</script>
+		
+	<script src="js/lib/jquery-1.9.1.min.js"></script>
+	<script src="js/lib/underscore.js"></script>
+	<script src="js/lib/backbone-min.js"></script>
+	<script src="js/lib/backbone.localStorage.js"></script>
+	<script src="js/models/heat.js"><script>
+	<script src="js/models/participant.js"></script>
+	<script src="js/collections/participants.js"></script>
+	<script src="js/views/participant.js"></script>
+	<script src="js/views/app.js"></script>
+	<script src="js/app.js"></script>
+		
+</body>
+	
+</html>

@@ -1,0 +1,52 @@
+<html>
+<head>
+<script type="text/javascript"> 
+	function getHomeIndex( numteams, round, game )
+	{
+		return game == 1 ? 0 : ( round + game - 2 ) % ( numteams - 1 ) + 1;
+	}
+	
+	function getAwayIndex( numteams, round, game )
+	{
+		return ( numteams - 1 + round - game ) % ( numteams - 1 ) + 1;
+	}
+	
+	function tournament( teamnames )
+	{
+	  var numteams = teamnames.length;
+	  var output = '<b>Number of Teams: ' + numteams + '<\/b>'
+	  var bOdd = false;
+	  
+	  if( numteams % 2 != 0 )
+	  {
+		  numteams += 1;
+		  bOdd = true;
+	  }
+	
+	  for( var round = 1; round < numteams; round++ ) 
+	  {
+	    output += '\n\n<b>Round ' + round + '<\/b>'
+	    
+	    for( game = 1; game <= numteams/2; game++ ) 
+	    {
+		    var homeIndex = getHomeIndex( numteams, round, game );
+		    var awayIndex = getAwayIndex( numteams, round, game );
+		    
+		    if( !(bOdd && (homeIndex == numteams - 1 || awayIndex == numteams - 1)) )
+		    {
+		    	output += '\n' + teamnames[homeIndex] + ' vs ' + teamnames[awayIndex];
+		    }
+	    }
+	  }
+	  
+	  document.write( '<pre>' + output + '</pre>' );
+	}
+</script>
+</head>
+<body>
+
+<script type="text/javascript">tournament( new Array( "One", "Two", "Three", "Four", "Five", "Six", "Seven", "Connor", "Spencer" ) )</script>
+
+</body>
+
+</html>

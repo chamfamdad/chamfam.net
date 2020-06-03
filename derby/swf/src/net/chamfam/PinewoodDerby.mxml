@@ -1,0 +1,148 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<mx:Application 
+	xmlns:mx="http://www.adobe.com/2006/mxml"
+	xmlns:comp="net.chamfam.components.*">
+	
+	<mx:Script>
+		<![CDATA[
+		import flash.events.Event;
+		import flash.events.MouseEvent;
+		import flash.ui.Mouse;
+		import mx.containers.HBox;
+		import mx.controls.Button;
+		import mx.controls.Spacer;
+		import mx.controls.Text;
+		import mx.controls.Alert;
+		import mx.events.FlexEvent;
+		
+		private var _aNames:Array = new Array();
+		
+		/**
+		 * 
+		 * @author Fletcher Chambers
+		 */
+		private function addName():void
+		{
+			if ( txtName.text.length <= 0 )
+			{
+				return;
+			}
+			
+			var text:Text = new Text();
+			
+			text.text = txtName.text;
+			_aNames.push( txtName.text );
+
+			// add it to the display
+			lstNames.addChild( text );
+
+			// clear it out to start over
+			txtName.text = "";
+		}
+		
+		private function onStartRace( event:MouseEvent ):void
+		{
+			vs.selectedIndex = 1;
+			
+			if ( race )
+			{
+				startRace();
+			}
+		}
+		
+		private function startRace():void
+		{
+			race.clear();
+			
+			for ( var i:int = 0 ; i < _aNames.length ; i++ )
+			{
+				race.addName( _aNames[i] );
+			}
+			
+			race.startRace();
+		}
+		
+		private function onRaceCreation( event:FlexEvent ):void 
+		{
+			startRace();
+		}
+		
+		/**
+		 * 
+		 * @author Fletcher Chambers
+		 */
+		private function onStartOver( event:MouseEvent ):void
+		{
+			_aNames = new Array();
+			race.clear();
+			lstNames.removeAllChildren();
+			vs.selectedIndex = 0;
+		}
+		
+		private function onShowResults( event:MouseEvent ):void
+		{
+			race.calculateResults( results );
+			
+			var space:Spacer = new Spacer();
+			
+			space.height = 200;
+			
+			results.addChild( space );
+			
+			var but:Button = new Button();
+			
+			but.label = "Start Over";
+			but.addEventListener( MouseEvent.CLICK, onStartOver );
+			results.addChild( but );
+			
+			vs.selectedIndex = 2;
+		}
+		]]>
+	</mx:Script>
+	
+	<mx:ViewStack
+		id="vs"
+		resizeToContent="true">
+			
+		<mx:VBox
+			verticalAlign="center">
+			<mx:Form>
+				<mx:Label text="Name:"/>
+				<mx:TextInput
+					id="txtName"
+					enter="addName()" />
+				<mx:Button 
+					label="Add"
+					click="addName()" />
+
+				<mx:VBox
+					id="lstNames"
+					verticalScrollPolicy="auto"
+					width="400" height="300"
+					>
+				</mx:VBox>
+				
+				<mx:Button 
+					label="Start Race"
+					click="onStartRace( event )"/>
+			</mx:Form>
+		</mx:VBox>
+		
+		<mx:VBox
+			verticalAlign="center" 
+			creationComplete="onRaceCreation( event )"
+			>
+				
+			<comp:Race id="race"/>
+			<mx:Button label="Race Results" click="onShowResults( event )" />
+			
+		</mx:VBox>
+	
+		<mx:VBox
+			id="results"
+			verticalAlign="center">
+				
+		</mx:VBox>
+		
+	</mx:ViewStack>
+</mx:Application>
