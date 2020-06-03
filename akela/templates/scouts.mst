@@ -1,0 +1,6 @@
+{{#scouts.length}}
+<h2>Cub Scouts</h2>
+<ul>
+  {{#scouts}}<li><a href="scout.html?{{key}}">{{name}}</a></li>{{/scouts}}
+</ul>
+{{/scouts.length}}

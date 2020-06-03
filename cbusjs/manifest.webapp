@@ -1,0 +1,13 @@
+{
+  "name": "CBusJS",
+  "description": "Let's try this as an HTML5 WebApp",
+  "launch_path": "/",
+  "icons": {
+    "128": "/img/icon-128.png"
+  },
+  "developer": {
+    "name": "Guy Royse",
+    "url": "http://www.cbusjs.org/"
+  },
+  "default_locale": "en"
+}

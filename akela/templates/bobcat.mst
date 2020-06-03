@@ -1,0 +1,33 @@
+<div class="panel panel-primary">
+  <div class="panel-heading">Bobcat Requirements</div>
+    <div class="panel-body">
+      {{^scout}}
+        <div class="col-sm-12">
+          <button type="button" class="btn btn-default add-bobcat">Add Bobcat</button>
+        </div>
+      {{/scout}}
+      {{#scout}}
+        <div class="col-sm-6">
+          <ul class="list-group">
+            <li class="list-group-item"><label><input type="checkbox" id="oath" {{#oath}}checked{{/oath}}/> Scout Oath</label></li>
+            <li class="list-group-item"><label><input type="checkbox" id="law" {{#law}}checked{{/law}}/> Scout Law</label></li>
+            <li class="list-group-item"><label><input type="checkbox" id="sign" {{#sign}}checked{{/sign}}/> Cub Scout Sign</label></li>
+            <li class="list-group-item"><label><input type="checkbox" id="handshake" {{#handshake}}checked{{/handshake}}/> Cub Scout Handshake</label></li>
+          </ul>
+        </div>
+        
+        <div class="col-sm-6">
+          <ul class="list-group">
+            <li class="list-group-item"><label><input type="checkbox" id="motto" {{#motto}}checked{{/motto}}/> Cub Scout Motto</label></li>
+            <li class="list-group-item"><label><input type="checkbox" id="salute" {{#salute}}checked{{/salute}}/> Cub Scout Salute</label></li>
+            <li class="list-group-item"><label><input type="checkbox" id="bobcat-parent" {{#parent}}checked{{/parent}}/> Parent's Guide to Child Abuse</label></li>
+          </ul>
+        </div>
+        
+        <div class="col-sm-12">
+          <button type="button" class="btn btn-default update">Update</button>
+        </div>
+      {{/scout}}
+    </div>
+  </div>
+</div>

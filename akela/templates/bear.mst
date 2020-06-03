@@ -1,0 +1,35 @@
+<div class="panel panel-primary">
+  <div class="panel-heading">Bear Requirements</div>
+    <div class="panel-body">
+      {{^scout}}
+        <div class="col-sm-12">
+          <button type="button" class="btn btn-default add-bear">Add Bear</button>
+        </div>
+      {{/scout}}
+      {{#scout}}
+        <div class="col-sm-6">
+          <ul class="list-group">
+            <li class="list-group-item"><label><input type="checkbox" id="bear-claws" {{#bearClaws}}checked{{/bearClaws}}/> Bear Claws</label></li>
+            <li class="list-group-item"><label><input type="checkbox" id="bear-necessities" {{#bearNecessities}}checked{{/bearNecessities}}/> Bear Necessities</label></li>
+            <li class="list-group-item"><label><input type="checkbox" id="fellowship-and-duty-to-god" {{#fellowshipAndDutyToGod}}checked{{/fellowshipAndDutyToGod}}/> Fellowship and Duty to God</label></li>
+            <li class="list-group-item"><label><input type="checkbox" id="fur-feathers-and-ferns" {{#furFeathersAndFerns}}checked{{/furFeathersAndFerns}}/> Fur, Feathers, and Ferns</label></li>
+            <li class="list-group-item"><label><input type="checkbox" id="grin-and-bear-it" {{#grinAndBearIt}}checked{{/grinAndBearIt}}/> Grin and Bear It</label></li>
+            <li class="list-group-item"><label><input type="checkbox" id="paws-for-action" {{#pawsForAction}}checked{{/pawsForAction}}/> Paws for Action</label></li>
+          </ul>
+        </div>
+    
+        <div class="col-sm-6">
+          <ul class="list-group">
+            <li class="list-group-item"><label><input type="checkbox" id="bear-elective" {{#elective}}checked{{/elective}}/> 1 Elective</label></li>
+            <li class="list-group-item"><label><input type="checkbox" id="bear-parent" {{#parent}}checked{{/parent}}/> Parent's Guide</label></li>
+            <li class="list-group-item"><label><input type="checkbox" id="bear-cyber-chip" {{#cyberChip}}checked{{/cyberChip}}/> Cyber Chip Award</label></li>
+          </ul>
+        </div>
+    
+        <div class="col-sm-12">
+          <button type="button" class="btn btn-default update">Update</button>
+        </div>
+      {{/scout}}
+    </div>
+  </div>
+</div>

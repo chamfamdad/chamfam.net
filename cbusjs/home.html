@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html>
+<head>
+   <title>Columbus JavaScript User Group</title>
+	<link rel="stylesheet" href="style/style.css" />
+</head>
+<body>
+	<header>Columbus JavaScript User Group</header>
+	<article>Guy Royse was here.</article>
+	<p>
+		<button id="installapp">Install as Application</button>
+	</p>
+	<footer>Copyright&copy;2012 Columbus JavaScript User Group, Guy Royse, President</footer>
+	<script src ="//ajax.googleapis.com/ajax/libs/jquery/1.8.3/jquery.min.js"></script>
+	<script src="script/app.js"></script>
+	<script>
+		$( "#installapp" ).click( 
+			function(){ navigator.mozApps.install( "/manifest.webapp" ); alert( "installed?" ); }
+		);
+	</script>
+</body>
+</html>
