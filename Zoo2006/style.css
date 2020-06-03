@@ -1,0 +1,111 @@
+html, body
+{
+	padding: 0;
+	margin: 0;
+	background: #008888;
+}
+
+#content
+{
+	padding: 10px;
+}
+
+#header
+{
+}
+
+#navigation
+{
+	float: left;
+	width: 200px;
+	color: #000000;
+}
+
+#navigation h2
+{
+	margin: 0;
+	margin-top: 10px;
+	padding: 0;
+}
+
+#navigation ul, #navigation li
+{
+	margin: 0;
+	padding: 0;
+	display: inline;
+	list-style: none;
+}
+
+#navigation a
+{
+	color: #fffff4;
+	font-weight: bold;
+}
+
+#main
+{
+	padding: 10px;
+	margin-left: 200px;
+	background: #fffff4;
+}
+
+#footer
+{
+	clear: both;
+}
+
+div.photo
+{
+	padding: 5px;
+	height: auto;
+	float: left;
+}
+
+div.photo p
+{
+	margin: 0;
+	padding: 0;
+	text-align: center;
+}
+
+div.photo img
+{
+	border: 1px solid #000000;
+	width: 160px;
+	height: 120px;
+}
+
+div.clear
+{
+	clear: both;
+}
+
+.bottomnav
+{
+	clear: both;
+	text-align: center;
+}
+
+.previous
+{
+	display: block;
+	float: left;
+	font-size: 1.2em;
+}
+
+.next
+{
+	display: block;
+	float: right;
+	font-size: 1.2em;
+}
+
+#tag
+{
+	margin-top: 20px;
+	padding-top: 10px;
+	clear: both;
+	font-style: italic;
+	font-size: .8em;
+	border-top: 1px solid #0f0f0f;
+}
