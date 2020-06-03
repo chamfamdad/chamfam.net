@@ -1,0 +1,48 @@
+<!DOCTYPE HTML>
+<html>
+<head>
+	<meta charset="utf-8">
+	<title>I'm a React app!</title>
+	<link rel="stylesheet" href="raw.css"/>
+</head>
+<body>
+  <div id="react-app"></div>
+  <p>
+    <a href="http://jamesknelson.com/learn-raw-react-no-jsx-flux-es6-webpack">Tutorial</a><br/>
+    <a href="http://jamesknelson.com/thank-you-for-subscribing/">PDF Cheat Sheets</a>
+  </p>
+  <script src="https://cdn.jsdelivr.net/react/0.14.0-rc1/react.min.js"></script>
+  <script src="https://cdn.jsdelivr.net/react/0.14.0-rc1/react-dom.min.js"></script>
+  <script>
+    var reactDOMNode = document.getElementById( "react-app" );
+    
+    var RootHash = React.createClass( {
+      propTypes: {},
+      
+      render: function() {
+        return React.createElement( 'p', {}, "I'm amazing.  I created a react router" );
+      }
+    });
+    
+    var FourOhFour = React.createClass( {
+      propTypes: {},
+      
+      render: function() {
+        return React.createElement( 'p', {}, "404 Not Found" );
+      }
+    });
+    
+    function navigated() {
+      if( window.location.hash === "" ) {
+        ReactDOM.render( React.createElement( RootHash, {} ), reactDOMNode );
+      } else {
+        ReactDOM.render( React.createElement( FourOhFour, {} ), reactDOMNode );
+      }
+    }
+    
+    window.addEventListener( 'hashchange', navigated, false );
+    
+    navigated();
+  </script>
+</body>
+</html>

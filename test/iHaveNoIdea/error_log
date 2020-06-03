@@ -1,0 +1,52 @@
+[12-Aug-2009 12:37:59] PHP Parse error:  syntax error, unexpected ';', expecting '(' in /home/chamfam0/public_html/powellplace/test/index.php on line 10
+[12-Aug-2009 12:38:03] PHP Parse error:  syntax error, unexpected ';', expecting '(' in /home/chamfam0/public_html/powellplace/test/index.php on line 10
+[12-Aug-2009 12:39:57] PHP Parse error:  syntax error, unexpected ';', expecting '(' in /home/chamfam0/public_html/powellplace/test/index.php on line 10
+[12-Aug-2009 12:39:59] PHP Parse error:  syntax error, unexpected ';', expecting '(' in /home/chamfam0/public_html/powellplace/test/index.php on line 10
+[12-Aug-2009 12:40:16] PHP Parse error:  syntax error, unexpected ';', expecting '(' in /home/chamfam0/public_html/powellplace/test/index.php on line 10
+[12-Aug-2009 12:40:31] PHP Parse error:  syntax error, unexpected ';', expecting '(' in /home/chamfam0/public_html/powellplace/test/index.php on line 10
+[12-Aug-2009 12:40:34] PHP Parse error:  syntax error, unexpected ';', expecting '(' in /home/chamfam0/public_html/powellplace/test/index.php on line 10
+[12-Aug-2009 12:41:04] PHP Parse error:  syntax error, unexpected ';', expecting '(' in /home/chamfam0/public_html/powellplace/test/index.php on line 7
+[12-Aug-2009 12:44:36] PHP Parse error:  syntax error, unexpected ';', expecting '(' in /home/chamfam0/public_html/powellplace/test/index.php on line 10
+[12-Aug-2009 12:45:09] PHP Parse error:  syntax error, unexpected ';', expecting '(' in /home/chamfam0/public_html/powellplace/test/index.php on line 10
+[12-Aug-2009 12:45:24] PHP Parse error:  syntax error, unexpected ';', expecting '(' in /home/chamfam0/public_html/powellplace/test/index.php on line 10
+[12-Aug-2009 12:45:40] PHP Parse error:  syntax error, unexpected ';', expecting '(' in /home/chamfam0/public_html/powellplace/test/index.php on line 10
+[12-Aug-2009 12:45:41] PHP Parse error:  syntax error, unexpected ';', expecting '(' in /home/chamfam0/public_html/powellplace/test/index.php on line 10
+[12-Aug-2009 13:03:04] PHP Parse error:  syntax error, unexpected T_STATIC, expecting T_OLD_FUNCTION or T_FUNCTION or T_VAR or '}' in /home/chamfam0/public_html/powellplace/test/settings.php on line 8
+[12-Aug-2009 13:06:35] PHP Parse error:  syntax error, unexpected T_STATIC, expecting T_OLD_FUNCTION or T_FUNCTION or T_VAR or '}' in /home/chamfam0/public_html/powellplace/test/settings.php on line 8
+[12-Aug-2009 13:06:57] PHP Parse error:  syntax error, unexpected T_STATIC, expecting T_OLD_FUNCTION or T_FUNCTION or T_VAR or '}' in /home/chamfam0/public_html/powellplace/test/settings.php on line 8
+[12-Aug-2009 13:07:00] PHP Parse error:  syntax error, unexpected T_STATIC, expecting T_OLD_FUNCTION or T_FUNCTION or T_VAR or '}' in /home/chamfam0/public_html/powellplace/test/settings.php on line 8
+[12-Aug-2009 13:07:36] PHP Parse error:  syntax error, unexpected ';', expecting '(' in /home/chamfam0/public_html/powellplace/test/index.php on line 10
+[12-Aug-2009 13:07:41] PHP Parse error:  syntax error, unexpected ';', expecting '(' in /home/chamfam0/public_html/powellplace/test/index.php on line 10
+[12-Aug-2009 13:07:46] PHP Parse error:  syntax error, unexpected T_STATIC, expecting T_OLD_FUNCTION or T_FUNCTION or T_VAR or '}' in /home/chamfam0/public_html/powellplace/test/settings.php on line 8
+[12-Aug-2009 13:08:42] PHP Parse error:  syntax error, unexpected T_STATIC, expecting T_OLD_FUNCTION or T_FUNCTION or T_VAR or '}' in /home/chamfam0/public_html/powellplace/test/settings.php on line 8
+[12-Aug-2009 13:08:43] PHP Parse error:  syntax error, unexpected T_STATIC, expecting T_OLD_FUNCTION or T_FUNCTION or T_VAR or '}' in /home/chamfam0/public_html/powellplace/test/settings.php on line 8
+[12-Aug-2009 13:12:09] PHP Parse error:  syntax error, unexpected T_STATIC, expecting T_OLD_FUNCTION or T_FUNCTION or T_VAR or '}' in /home/chamfam0/public_html/powellplace/test/settings.php on line 8
+[12-Aug-2009 13:12:38] PHP Parse error:  syntax error, unexpected T_STRING, expecting T_OLD_FUNCTION or T_FUNCTION or T_VAR or '}' in /home/chamfam0/public_html/powellplace/test/settings.php on line 8
+[12-Aug-2009 13:13:18] PHP Parse error:  syntax error, unexpected T_STATIC, expecting T_OLD_FUNCTION or T_FUNCTION or T_VAR or '}' in /home/chamfam0/public_html/powellplace/test/settings.php on line 8
+[12-Aug-2009 13:17:43] PHP Parse error:  syntax error, unexpected T_STRING, expecting T_OLD_FUNCTION or T_FUNCTION or T_VAR or '}' in /home/chamfam0/public_html/powellplace/test/settings.php on line 8
+[12-Aug-2009 13:18:12] PHP Parse error:  syntax error, unexpected T_STRING, expecting T_OLD_FUNCTION or T_FUNCTION or T_VAR or '}' in /home/chamfam0/public_html/powellplace/test/settings.php on line 7
+[12-Aug-2009 13:18:31] PHP Parse error:  syntax error, unexpected T_VARIABLE, expecting T_OLD_FUNCTION or T_FUNCTION or T_VAR or '}' in /home/chamfam0/public_html/powellplace/test/settings.php on line 8
+[12-Aug-2009 13:18:35] PHP Parse error:  syntax error, unexpected T_VARIABLE, expecting T_OLD_FUNCTION or T_FUNCTION or T_VAR or '}' in /home/chamfam0/public_html/powellplace/test/settings.php on line 8
+[12-Aug-2009 13:18:36] PHP Parse error:  syntax error, unexpected T_VARIABLE, expecting T_OLD_FUNCTION or T_FUNCTION or T_VAR or '}' in /home/chamfam0/public_html/powellplace/test/settings.php on line 8
+[12-Aug-2009 13:18:37] PHP Parse error:  syntax error, unexpected T_VARIABLE, expecting T_OLD_FUNCTION or T_FUNCTION or T_VAR or '}' in /home/chamfam0/public_html/powellplace/test/settings.php on line 8
+[12-Aug-2009 13:18:37] PHP Parse error:  syntax error, unexpected T_VARIABLE, expecting T_OLD_FUNCTION or T_FUNCTION or T_VAR or '}' in /home/chamfam0/public_html/powellplace/test/settings.php on line 8
+[12-Aug-2009 13:19:21] PHP Parse error:  syntax error, unexpected T_STATIC, expecting T_VARIABLE in /home/chamfam0/public_html/powellplace/test/settings.php on line 8
+[14-Aug-2009 13:00:26] PHP Parse error:  syntax error, unexpected T_STATIC, expecting T_VARIABLE in /home/chamfam0/public_html/powellplace/test/settings.php on line 8
+[14-Aug-2009 13:05:46] PHP Parse error:  syntax error, unexpected ';', expecting '(' in /home/chamfam0/public_html/powellplace/test/index.php on line 10
+[14-Aug-2009 13:05:59] PHP Parse error:  syntax error, unexpected ';', expecting '(' in /home/chamfam0/public_html/powellplace/test/index.php on line 10
+[14-Aug-2009 13:06:00] PHP Parse error:  syntax error, unexpected ';', expecting '(' in /home/chamfam0/public_html/powellplace/test/index.php on line 10
+[14-Aug-2009 13:06:42] PHP Parse error:  syntax error, unexpected T_STATIC, expecting T_VARIABLE in /home/chamfam0/public_html/powellplace/test/settings.php on line 8
+[14-Aug-2009 13:09:57] PHP Parse error:  syntax error, unexpected T_STRING, expecting T_OLD_FUNCTION or T_FUNCTION or T_VAR or '}' in /home/chamfam0/public_html/powellplace/test/settings.php on line 8
+[14-Aug-2009 13:10:57] PHP Parse error:  syntax error, unexpected T_STATIC, expecting T_OLD_FUNCTION or T_FUNCTION or T_VAR or '}' in /home/chamfam0/public_html/powellplace/test/settings.php on line 8
+[14-Aug-2009 13:10:58] PHP Parse error:  syntax error, unexpected T_STATIC, expecting T_OLD_FUNCTION or T_FUNCTION or T_VAR or '}' in /home/chamfam0/public_html/powellplace/test/settings.php on line 8
+[14-Aug-2009 13:12:41] PHP Parse error:  syntax error, unexpected T_CONST, expecting T_OLD_FUNCTION or T_FUNCTION or T_VAR or '}' in /home/chamfam0/public_html/powellplace/test/settings.php on line 8
+[14-Aug-2009 13:31:14] PHP Warning:  require_once(.\settings.php) [<a href='function.require-once'>function.require-once</a>]: failed to open stream: No such file or directory in /home/chamfam0/public_html/test/index.php on line 3
+[14-Aug-2009 13:31:14] PHP Fatal error:  require_once() [<a href='function.require'>function.require</a>]: Failed opening required '.\settings.php' (include_path='.:/usr/lib/php:/usr/local/lib/php') in /home/chamfam0/public_html/test/index.php on line 3
+[17-Aug-2009 08:59:27] PHP Warning:  require_once(.\settings.php) [<a href='function.require-once'>function.require-once</a>]: failed to open stream: No such file or directory in /home/chamfam0/public_html/test/index.php on line 3
+[17-Aug-2009 08:59:27] PHP Fatal error:  require_once() [<a href='function.require'>function.require</a>]: Failed opening required '.\settings.php' (include_path='.:/usr/lib/php:/usr/local/lib/php') in /home/chamfam0/public_html/test/index.php on line 3
+[03-Sep-2009 08:34:44] PHP Warning:  require_once(.\settings.php) [<a href='function.require-once'>function.require-once</a>]: failed to open stream: No such file or directory in /home/chamfam0/public_html/test/index.php on line 3
+[03-Sep-2009 08:34:44] PHP Fatal error:  require_once() [<a href='function.require'>function.require</a>]: Failed opening required '.\settings.php' (include_path='.:/usr/lib/php:/usr/local/lib/php') in /home/chamfam0/public_html/test/index.php on line 3
+[03-Sep-2009 08:35:42] PHP Parse error:  syntax error, unexpected T_VARIABLE in /home/chamfam0/public_html/test/index.php on line 57
+[22-Mar-2014 17:55:27 America/Los_Angeles] PHP Warning:  Module 'timezonedb' already loaded in Unknown on line 0
+[22-Mar-2014 17:55:27 America/Los_Angeles] PHP Parse error:  syntax error, unexpected T_VARIABLE in /home/chamfam0/public_html/test/index.php on line 57
+[28-Sep-2015 10:52:07 America/Los_Angeles] PHP Parse error:  syntax error, unexpected '$filetype' (T_VARIABLE) in /home/chamfam0/public_html/test/index.php on line 57
