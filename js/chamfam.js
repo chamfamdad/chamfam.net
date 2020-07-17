@@ -8,7 +8,7 @@
   
   $.ajax( {
     type: "get",
-    url: "/templates/footer.htm",
+    url: "./templates/footer.htm",
     success: updateFooter
   });
   
