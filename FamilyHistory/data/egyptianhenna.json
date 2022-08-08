@@ -1,0 +1,19 @@
+{
+    "name": "Egyptian Henna",
+    "description": "For Tinting the Hair a Titian Red",
+    "fsid": "KWCB-ZF5",
+    "owner": "Effie Jeanette Miles",
+    "demensions": "15cm x 4.3cm x 3.7cm",
+    "material": "metal, plant",
+    "photos": ["egyptianhenna.jpg"],
+    "stories": [ 
+        {
+            "details": ["Effie claims to have never dyed her hair but this was found in her home."],
+            "source": "Kathleen Lenore Nowland"
+        },
+        {
+            "details":["This is story number 2"],
+            "source": "Said noone"
+        }
+      ]
+  }

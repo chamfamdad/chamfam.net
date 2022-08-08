@@ -1,0 +1,15 @@
+{
+    "name": "Ivory Shoe Horn",
+    "description": "Ivery shoe horn",
+    "fsid": "KWCB-ZF5",
+    "owner": "Effie Jeanette Miles",
+    "demensions": "21cm x 4.3cm x 1.5cm",
+    "material": "ivory, metal",
+    "photos": ["ivoryshoehorn.jpg"],
+    "stories": [ 
+        {
+            "details": ["Don't know where this came from."],
+            "source": "Marie"
+        }
+      ]
+  }
