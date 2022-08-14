@@ -1,0 +1,54 @@
+[
+  {
+    "id": 0,
+    "name": "",
+    "description": "",
+    "fsid": "",
+    "owner": "",
+    "demensions": "",
+    "material": "",
+    "photos": [],
+    "stories": [ 
+        {
+            "details": [],
+            "source": ""
+        }
+      ]
+  },
+  {
+    "id": 1,
+    "name": "Egyptian Henna",
+    "description": "For Tinting the Hair a Titian Red",
+    "fsid": "KWCB-ZF5",
+    "owner": "Effie Jeanette Miles",
+    "demensions": "15cm x 4.3cm x 3.7cm",
+    "material": "metal, plant",
+    "photos": ["egyptianhenna.jpg"],
+    "stories": [ 
+        {
+            "details": ["Effie claims to have never dyed her hair but this was found in her home."],
+            "source": "Kathleen Lenore Nowland"
+        },
+        {
+            "details":["This is story number 2"],
+            "source": "Said noone"
+        }
+      ]
+  },
+  {
+    "id": 2,
+    "name": "Ivory Shoe Horn",
+    "description": "Ivery shoe horn",
+    "fsid": "KWCB-ZF5",
+    "owner": "Effie Jeanette Miles",
+    "demensions": "21cm x 4.3cm x 1.5cm",
+    "material": "ivory, metal",
+    "photos": ["ivoryshoehorn.jpg"],
+    "stories": [ 
+        {
+            "details": ["Don't know where this came from."],
+            "source": "Marie"
+        }
+      ]
+  }
+]
