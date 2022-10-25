@@ -1,0 +1,50 @@
+{
+  "name": "Suzi's Pumpkin Squares",
+  "other":[
+      {
+        "name": "Crust",
+        "ul": [
+          "1 pkg yellow cake mix (minus 1 cup used for topping)",
+          "1/2 c softened butter",
+          "1 egg"
+          ],
+        "ol": [
+          "Prepare crust and press into a 9\"x13\" cake pan."
+        ]
+      },
+      {
+        "name": "Filling",
+        "ul": [
+          "1 lb can of pumpkin",
+          "1/2 t pumpkin pie spice",
+          "1/2 t ginger",
+          "1/4 t cloves",
+          "1/2 c sugar",
+          "2 eggs",
+          "2/3 c milk"
+          ],
+          "ol": [
+            "Prepare filling and pour over crust."
+          ]
+      },
+      {
+        "name": "Topping",
+        "ul": [
+          "1/4 c sugar",
+          "1 t cinnamon",
+          "1/4 c butter",
+          "1 c cake mix"
+          ],
+          "ol": [
+            "Sprinkle the topping over the filling"
+          ]
+      }
+    ],
+    "instructions": [
+      "Prepare crust, filling, and topping in a 9\" x 13\" pan",
+      "Bake at 350 for 45 to 50 minutes",
+      "Serve with whipped topping"
+    ],
+  "yield": "9\" x 13\"",
+  "source": "Suzi Flake"
+}
