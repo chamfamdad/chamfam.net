@@ -50,5 +50,21 @@
             "source": "Marie"
         }
       ]
+  },
+  {
+    "id": 3,
+    "name": "Leather Bag",
+    "description": "Leather attache carried by Houston Hatch",
+    "fsid": "KWZW-B68",
+    "owner": "Houston Hatch",
+    "demensions": "40cm x 30cm x 7cm",
+    "material": "leather, metal",
+    "photos": ["leatherbriefcasea.jpg", "leatherbriefcaseb.jpg", "leatherbriefcasec.jpg", "leatherbriefcased.jpg"],
+    "stories": [ 
+        {
+            "details": ["This was my dad's that he carried on his mission."],
+            "source": "Rulon Hatch"
+        }
+      ]
   }
 ]
