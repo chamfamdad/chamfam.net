@@ -98,5 +98,21 @@
             "source": "Marie Chambers"
         }
       ]
+  },
+  {
+    "id": 6,
+    "name": "Humming Bird",
+    "description": "Marble humming bird",
+    "fsid": "",
+    "owner": "Marie Chambers",
+    "demensions": "3cm x 3cm x 0.5cm",
+    "material": "marble",
+    "photos": ["hummingbird.jpg"],
+    "stories": [ 
+        {
+            "details": ["Kathy Hatck loves humming birds."],
+            "source": "Marie Chambers"
+        }
+      ]
   }
 ]
