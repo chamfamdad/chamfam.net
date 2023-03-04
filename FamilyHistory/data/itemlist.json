@@ -66,5 +66,37 @@
             "source": "Rulon Hatch"
         }
       ]
+  },
+  {
+    "id": 4,
+    "name": "Horse Statue",
+    "description": "Horse statue",
+    "fsid": "KWZW-B68",
+    "owner": "Houston Hatch",
+    "demensions": "13cm x 9cm x 5cm",
+    "material": "brass, leather, aluminum",
+    "photos": ["brasshorsea.jpg", "brasshorseb.jpg", "brasshorsec.jpg"],
+    "stories": [ 
+        {
+            "details": ["My dad loved horses."],
+            "source": "Rulon Hatch"
+        }
+      ]
+  },
+  {
+    "id": 5,
+    "name": "Gold Miner",
+    "description": "Copper figure of a gold miner panning for gold",
+    "fsid": "",
+    "owner": "Marie Chambers",
+    "demensions": "5cm x 5cm x 5cm",
+    "material": "copper",
+    "photos": ["goldminera.jpg", "goldminerb.jpg"],
+    "stories": [ 
+        {
+            "details": ["I worked at Cripple Creek, Colorado one summer."],
+            "source": "Marie Chambers"
+        }
+      ]
   }
 ]
