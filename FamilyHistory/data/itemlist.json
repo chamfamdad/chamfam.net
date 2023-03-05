@@ -114,5 +114,81 @@
             "source": "Marie Chambers"
         }
       ]
+  },
+  {
+    "id": 7,
+    "name": "Bird Bath",
+    "description": "Marble bird bath",
+    "fsid": "",
+    "owner": "Kathleen Hatch",
+    "demensions": "",
+    "material": "marble",
+    "photos": ["birdbatha.jpg","birdbathb.jpg","birdbathc.jpg"],
+    "stories": [ 
+      ]
+  },
+  {
+    "id": 8,
+    "name": "Cigar Box",
+    "description": "Tin cigar box",
+    "fsid": "KW8T-CPG",
+    "owner": "Betty Chambers",
+    "demensions": "",
+    "material": "tin",
+    "photos": ["cigarboxa.jpg","cigarboxb.jpg","cigarboxc.jpg"],
+    "stories": [ 
+      ]
+  },
+  {
+    "id": 9,
+    "name": "Green Bowl",
+    "description": "Green glass bowl",
+    "fsid": "",
+    "owner": "",
+    "demensions": "",
+    "material": "glass",
+    "photos": ["greenbowla.jpg","greenbowlb.jpg"],
+    "stories": [ 
+      ]
+  },
+  {
+    "id": 10,
+    "name": "Maracas",
+    "description": "Maracas",
+    "fsid": "",
+    "owner": "",
+    "demensions": "",
+    "material": "Wood",
+    "photos": ["maracasa.jpg","maracasb.jpg"],
+    "stories": [ 
+      ]
+  },
+  {
+    "id": 11,
+    "name": "Sheep",
+    "description": "Brass sheep",
+    "fsid": "",
+    "owner": "",
+    "demensions": "",
+    "material": "Brass",
+    "photos": ["sheepa.jpg","sheepb.jpg"],
+    "stories": [ 
+      ]
+  },
+  {
+    "id": 12,
+    "name": "Zenith console radio, S636443",
+    "description": "Zenith radio",
+    "fsid": "KWZW-B68",
+    "owner": "Houston Hatch",
+    "demensions": "",
+    "material": "Wood",
+    "photos": ["zenithradioa.jpg","zenithradiob.jpg","zenithradioc.jpg","zenithradiod.jpg","zenithradioe.jpg","zenithradiof.jpg","zenithradiog.jpg"],
+    "stories": [
+      {
+        "details": ["We used this as a prop for the world premiere of Children of the Promise."],
+        "source": "Fletcher Chambers"
+      }
+    ]
   }
 ]
