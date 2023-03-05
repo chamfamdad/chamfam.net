@@ -28,10 +28,6 @@
         {
             "details": ["Effie claims to have never dyed her hair but this was found in her home."],
             "source": "Kathleen Lenore Nowland"
-        },
-        {
-            "details":["This is story number 2"],
-            "source": "Said noone"
         }
       ]
   },
@@ -46,25 +42,21 @@
     "photos": ["ivoryshoehorn.jpg"],
     "stories": [ 
         {
-            "details": ["Don't know where this came from."],
+            "details": ["Don't know where this came from.  I think it was in the things we got from Effie."],
             "source": "Marie"
         }
       ]
   },
   {
     "id": 3,
-    "name": "Leather Bag",
-    "description": "Leather messenger bag carried by Houston Hatch",
+    "name": "Leather Briefcase",
+    "description": "Leather briefcase carried by Houston Hatch",
     "fsid": "KWZW-B68",
     "owner": "Houston Hatch",
     "demensions": "40cm x 30cm x 7cm",
     "material": "leather, metal",
     "photos": ["leatherbriefcasea.jpg", "leatherbriefcaseb.jpg", "leatherbriefcasec.jpg", "leatherbriefcased.jpg"],
     "stories": [ 
-        {
-            "details": ["This was my dad's that he carried on his mission."],
-            "source": "Rulon Hatch"
-        }
       ]
   },
   {
@@ -78,7 +70,7 @@
     "photos": ["brasshorsea.jpg", "brasshorseb.jpg", "brasshorsec.jpg"],
     "stories": [ 
         {
-            "details": ["My dad loved horses."],
+            "details": ["These used to sit on the mantle.", "We were not supposed to play with them."],
             "source": "Rulon Hatch"
         }
       ]
@@ -88,14 +80,14 @@
     "name": "Gold Miner",
     "description": "Copper figure of a gold miner panning for gold",
     "fsid": "",
-    "owner": "Marie Chambers",
+    "owner": "",
     "demensions": "5cm x 5cm x 5cm",
     "material": "copper",
     "photos": ["goldminera.jpg", "goldminerb.jpg"],
     "stories": [ 
         {
-            "details": ["I worked at Cripple Creek, Colorado one summer."],
-            "source": "Marie Chambers"
+            "details": ["We had a family reunion in Placerville, California where Aunt Irene lived. We were panning for gold and I said let's let the next pan be for Jared and the following one for Becky.  They both had gold in them.  My brother Bill was not pleased."],
+            "source": "Kathy Hatch"
         }
       ]
   },
@@ -104,14 +96,14 @@
     "name": "Humming Bird",
     "description": "Marble humming bird",
     "fsid": "",
-    "owner": "Marie Chambers",
+    "owner": "Kathleen Lenore Nowloand",
     "demensions": "3cm x 3cm x 0.5cm",
     "material": "marble",
     "photos": ["hummingbird.jpg"],
     "stories": [ 
         {
-            "details": ["Kathy Hatck loves humming birds."],
-            "source": "Marie Chambers"
+            "details": ["We got this while on a trip to Acapulco, Mexico."],
+            "source": "Kathy Hatch"
         }
       ]
   },
@@ -120,12 +112,16 @@
     "name": "Bird Bath",
     "description": "Marble bird bath",
     "fsid": "",
-    "owner": "Kathleen Hatch",
+    "owner": "Effie Jeanette Miles",
     "demensions": "",
     "material": "marble",
     "photos": ["birdbatha.jpg","birdbathb.jpg","birdbathc.jpg"],
     "stories": [ 
-      ]
+      {
+        "details": ["I think this is Italian marble and since Fletcher went on a mission to Rome he inherited it."],
+        "source": "Kathy Hatch"
+      }
+  ]
   },
   {
     "id": 8,
@@ -137,6 +133,10 @@
     "material": "tin",
     "photos": ["cigarboxa.jpg","cigarboxb.jpg","cigarboxc.jpg"],
     "stories": [ 
+        {
+          "details": ["We used this as our crayon box when I was a child."],
+          "source": "Fletcher Chambers"
+        }
       ]
   },
   {
@@ -156,11 +156,16 @@
     "name": "Maracas",
     "description": "Maracas",
     "fsid": "",
-    "owner": "",
+    "owner": "Kathleen Lenore Nowloand",
     "demensions": "",
     "material": "Wood",
     "photos": ["maracasa.jpg","maracasb.jpg"],
     "stories": [ 
+      {
+        "details": ["Got these on our trip Acapulco, Mexico.  Rulon's company had a contest where the employees could win the trip.  We stayed at the Princess Mundo Imperial hotel.",
+        "Rulon would not let me have a nap!"],
+        "source": "Kathy Hatch"
+      }
       ]
   },
   {
@@ -185,6 +190,10 @@
     "material": "Wood",
     "photos": ["zenithradioa.jpg","zenithradiob.jpg","zenithradioc.jpg","zenithradiod.jpg","zenithradioe.jpg","zenithradiof.jpg","zenithradiog.jpg"],
     "stories": [
+      {
+        "details": ["Listened to BYU basketball games. Terry Tebbs was one of the players I remember playing the team."],
+        "source": "Rulon Hatch"
+      },
       {
         "details": ["We used this as a prop for the world premiere of Children of the Promise."],
         "source": "Fletcher Chambers"
