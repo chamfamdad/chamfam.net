@@ -1,0 +1,18 @@
+# OS generated files
+.DS_Store
+Thumbs.db
+
+# Dependency directories
+node_modules/
+bower_components/
+
+# Build artifacts
+build/
+dist/
+tmp/
+*.log
+*.tmp
+
+# Editor swap files
+*.swp
+*.swo
