@@ -6,7 +6,7 @@
     <meta http-equiv="Cache-Control" content="no-cache, no-store, must-revalidate" />
     <meta http-equiv="Pragma" content="no-cache" />
     <meta http-equiv="Expires" content="0" />
-    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet">
     <title>Family History</title>
     <!-- HTML5 shim and Respond.js for IE8 support of HTML5 elements and media queries -->
     <!--[if lt IE 9]>
@@ -18,12 +18,12 @@
   <body>
     
     <div class="container">
-      <div class="page-header">
+      <div class="mb-4 pb-2 border-bottom">
         <h1>Family History</h1>
-      
+
         <ol class="breadcrumb">
-          <li><a href="/">Home</a></li>
-          <li class="active">Family History</li>
+          <li class="breadcrumb-item"><a href="/">Home</a></li>
+          <li class="breadcrumb-item active" aria-current="page">Family History</li>
         </ol>
 
         <p>
@@ -40,8 +40,7 @@
     <footer id="footer">
     </footer>
     
-    <script src="https://code.jquery.com/jquery-2.2.4.min.js" integrity="sha256-BbhdlvQf/xTY9gja0Dq3HiwQF8LaCRTXxZKRutelT44=" crossorigin="anonymous"></script>
-    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js" integrity="sha384-Tc5IQib027qvyjSMfHjOMaLkfuWVxZxUPnCJA7l2mCWNIpG9mGCD8wGNIcPD7Txa" crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/mustache.js/2.1.3/mustache.min.js"></script>
     <script src="/js/chamfam.js"></script>
     <script type="x-tmpl-mustache" id="template">
@@ -70,7 +69,7 @@
               </div>
               {{#photos}}
               <div class="col-md-4">
-              <img src="./data/{{.}}" alt="{{name}}" class="img-responsive, img-thumbnail"/>
+              <img src="./data/{{.}}" alt="{{name}}" class="img-fluid img-thumbnail"/>
               </div>
               {{/photos}}
           </div>
@@ -93,22 +92,22 @@
 
     </script>
     <script type="text/javascript">
-      var inventory;
-      var notFound;
+      let inventory;
+      let notFound;
 
       function onItem( id ){
-        $( "#catalog" ).hide();
+        document.getElementById("catalog").style.display = "none";
 
-        item = inventory.find(item => item.id === id)
+        let item = inventory.find(item => item.id === id)
         
         if(!item) {
           item = notFound;
         }
 
-        var template = $("#template").html();
-        var output = Mustache.to_html( template, item );
-        $( "#item" ).html( output );
-        $( "#item" ).show();
+        const template = document.getElementById("template").innerHTML;
+        const output = Mustache.to_html( template, item );
+        document.getElementById("item").innerHTML = output;
+        document.getElementById("item").style.display = "block";
 
         updateDocumentHistory(id);
         document.title = "Family History - " + item.name;
@@ -117,8 +116,8 @@
       }
 
       function back() {
-        $( "#item" ).hide();
-        $( "#catalog" ).show();
+        document.getElementById("item").style.display = "none";
+        document.getElementById("catalog").style.display = "block";
 
         updateDocumentHistory();
         document.title = "Family History";    
@@ -130,9 +129,9 @@
       function updateDocumentHistory(id) {
         if(id) {
           if ('URLSearchParams' in window) {
-            var searchParams = new URLSearchParams(window.location.search);
+            const searchParams = new URLSearchParams(window.location.search);
             searchParams.set("id", id);
-            var newRelativePathQuery = window.location.pathname + '?' + searchParams.toString();
+            const newRelativePathQuery = window.location.pathname + '?' + searchParams.toString();
             history.pushState(null, '', newRelativePathQuery);      
           }
         }
@@ -142,24 +141,26 @@
       }
       
       // execute on page load
-      (function( $, document, window, undefined ){
-        var ul = $( "#catalog" );
+      (function( document, window ){
+        const ul = document.getElementById("catalog");
         
-        ul.empty();
+        ul.innerHTML = "";
         
-        $.getJSON( "./data/itemlist.json" )
-          .done( function( data ){
-            var sLink;  
-            var i;
-
+        fetch("./data/itemlist.json")
+          .then(response => response.json())
+          .then(data => {
             // remove id 0 as it is just a template
             notFound = data.shift();
 
             // sort by name
-            inventory = data.sort((a,b) => a.name.toLowerCase() === b.name.toLowerCase())
+            inventory = data.sort((a,b) => a.name.toLowerCase().localeCompare(b.name.toLowerCase()))
 
             // fill in the list
-            data.map(item => ul.append( "<li><a href=\"items.html\" onclick=\"return onItem(" + item.id + ")\" >" + item.name + "</a></li>" ));
+            data.forEach(item => {
+              const li = document.createElement("li");
+              li.innerHTML = `<a href="items.html" onclick="return onItem(${item.id})">${item.name}</a>`;
+              ul.appendChild(li);
+            });
 
             // see if they specified an id
             const urlSearchParams = new URLSearchParams(window.location.search);
@@ -169,12 +170,14 @@
               onItem(parseInt(params.id));
             }
           })
-          .fail( function( jqxhr, textStatus, error ){
-            ul.append( "<li class=\"alert alert-danger\">Request Failed: " + textStatus + ", " + error + "</li>" );
-          })
-        ;
+          .catch(error => {
+            const li = document.createElement("li");
+            li.className = "alert alert-danger";
+            li.textContent = "Request Failed: " + error.message;
+            ul.appendChild(li);
+          });
 
-      })( jQuery, document, window );
+      })( document, window );
     </script>
   </body>
 </html>

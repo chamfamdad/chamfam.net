@@ -1,0 +1,137 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>1980 Nowland cousins at the beach</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="/style/style.css">
+  </head>
+  <body>
+    <h1>Nowland Cousins at the Beach</h1>
+    <h2>circa 1980</h2>
+    <div class="album py-5 bg-body-tertiary">
+
+      <div class="card container">
+        <img id="image" class="card-img-top" src="" alt="placeholder">
+        <div class="card-body">
+          <h5 id="caption" class="card-title">Placeholder</h5>
+          <p id="people" class="card-text">People</p>
+            <button id="prev" onclick="return prev();" class="btn btn-primary" aria-label="previous photo">< Prev</button>
+            <div id="photo-buttons" class="btn-group btn-group-sm" role="group"></div>
+            <button id="next" onclick="return next();" class="btn btn-primary" aria-label="next photo">Next ></button>
+        </div>
+      </div>
+
+    </div>    
+    
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"></script>
+    <script src="/js/chamfam.js"></script>
+    <script>
+      let photos;
+      let index = 0;
+
+      fetch("data.json")
+      .then(response => response.json())
+      .then(data => {
+        console.log(data);
+        photos = data;
+        addButtons();
+        show();
+      })
+      .catch(error => {
+        // Handle any errors
+        console.error('Error:', error);
+      });
+
+      function addButtons() {
+        let div = document.getElementById("photo-buttons");
+
+        for (i = 0 ; i < photos.images.length ; i++) {
+          addButton(div, i);
+        }
+      }
+
+      function addButton(div, index) {
+
+        let btn = document.createElement("button");
+        btn.setAttribute("type", "button");
+        btn.setAttribute("onclick", "return pick(" + index+ ");");
+        btn.classList.add("btn");
+        btn.classList.add("btn-secondary");
+        btn.textContent = (index + 1);
+
+        div.appendChild(btn);
+      }
+
+      function pick(i) {
+        index = i;
+        show();
+      }
+
+      function next() {
+        index++;
+        show();
+      }
+
+      function prev() {
+        index--;
+        show();
+      }
+
+      function show() {
+        let h5 = document.getElementById("caption");
+
+        h5.textContent = photos.images[index].caption;
+
+        img = document.getElementById("image");
+
+        img.src = photos.images[index].image;
+        img.alt = photos.images[index].caption
+
+        p = document.getElementById("people")
+
+        p.innerText = photos.images[index].people.join(", ")
+
+        if (index == 0) {
+          btn = document.getElementById("prev")
+          btn.ariaDisabled = true
+          btn.classList.add("disabled")
+        } else {
+          btn = document.getElementById("prev")
+          btn.ariaDisabled = false
+          btn.classList.remove("disabled")
+        }
+
+        if (index == photos.images.length - 1) {
+          btn = document.getElementById("next")
+          btn.ariaDisabled = true
+          btn.classList.add("disabled")
+        } else {
+          btn = document.getElementById("next")
+          btn.ariaDisabled = false
+          btn.classList.remove("disabled")
+        }
+
+        selectButton();
+      }
+
+      function selectButton() {
+        let div = document.getElementById("photo-buttons");
+        let buttons = div.childNodes;
+
+        for (i = 0 ; i < buttons.length ; i++) {
+          let btn = buttons[i];
+
+          if (i == index) {
+            btn.classList.add("btn-dark");
+          } else {
+            btn.classList.remove("btn-dark")
+          }
+        }
+
+      }
+
+    </script>
+  </body>
+</html>
