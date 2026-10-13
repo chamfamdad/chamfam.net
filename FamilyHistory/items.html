@@ -291,22 +291,25 @@
               {{/photos}}
           </div>
 
-          <h2>Stories</h2>
-
-          {{#stories}}
-              {{#details}}
-              <p>{{.}}</p>
-              {{/details}}
-              <p> - {{source}}</p>
-          {{/stories}}
-
-          <a href="mailto:chamfamdad@gmail.com?subject={{name}}({{id}})">Send me your story about this item.</a>
+          {{> stories}}
       {{/name}}
 
       {{^ name}}
           <h2>Item Not Found</h2>
       {{/name}}
 
+    </script>
+    <script type="x-tmpl-mustache" id="storiesTemplate">
+      <h2>Stories</h2>
+
+      {{#stories}}
+          {{#details}}
+          <p>{{.}}</p>
+          {{/details}}
+          <p> - {{source}}</p>
+      {{/stories}}
+
+      <a href="mailto:chamfamdad@gmail.com?subject={{name}}({{id}})">Send me your story about this item.</a>
     </script>
     <script type="text/javascript">
       let inventory;
@@ -328,6 +331,7 @@
         }
 
         const isScrapbook = item && item.type === 'scrapbook';
+        const storiesTemplate = document.getElementById("storiesTemplate").innerHTML;
 
         if (isScrapbook) {
           document.getElementById("item").innerHTML = `
@@ -350,6 +354,10 @@
               <section class="photo-grid" id="photoGallery" aria-label="Scrapbook photo gallery"></section>
             </div>
 
+            <div class="mt-4">
+              ${Mustache.to_html( storiesTemplate, item )}
+            </div>
+
             <div id="photoModal" class="photo-modal" aria-hidden="true" role="dialog" aria-modal="true" aria-labelledby="modalTitle">
               <button id="closeModal" class="modal-close" type="button" aria-label="Close photo">×</button>
               <div class="modal-content">
@@ -366,7 +374,7 @@
           initializePhotoAlbum(item.scrapbookDir, item.photoCount);
         } else {
           const template = document.getElementById("template").innerHTML;
-          const output = Mustache.to_html( template, item );
+          const output = Mustache.to_html( template, item, { stories: storiesTemplate } );
           document.getElementById("item").innerHTML = output;
         }
 
