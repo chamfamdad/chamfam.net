@@ -214,5 +214,20 @@
     "photoCount": 152,
     "stories": [
     ]
+  },
+  {
+    "id": 14,
+    "name": "1980 Nowland Cousins at the Beach",
+    "description": "Photos of the Nowland cousins at the beach, circa 1980",
+    "fsid": "",
+    "owner": "",
+    "demensions": "",
+    "material": "photographs",
+    "photos": [],
+    "type": "scrapbook",
+    "scrapbookDir": "./1980 Nowland cousins at the beach",
+    "photoCount": 16,
+    "stories": [
+    ]
   }
 ]

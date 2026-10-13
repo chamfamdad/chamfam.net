@@ -144,6 +144,14 @@
         color: #5c4735;
       }
 
+      .photo-card .photo-people {
+        margin: 0.35rem 0 0;
+        text-align: center;
+        font-size: 0.72rem;
+        line-height: 1.3;
+        color: #5c4735;
+      }
+
       .photo-modal {
         position: fixed;
         inset: 0;
@@ -182,6 +190,12 @@
       .modal-title {
         margin: 0;
         font-size: 1rem;
+      }
+
+      .modal-people {
+        margin: 0.25rem 0 0;
+        font-size: 0.85rem;
+        max-width: 92vw;
       }
 
       .modal-nav,
@@ -341,7 +355,7 @@
 
               <section class="album-notes" aria-label="Album notes">
                 <div class="note">${item.name}</div>
-                <div class="note accent">Friends, milestones, and everyday moments</div>
+                <div class="note accent">${item.description}</div>
               </section>
 
               <nav class="pagination-controls" aria-label="Photo pages">
@@ -366,6 +380,7 @@
                 <img id="modalImage" src="" alt="Full-size scrapbook photo">
                 <div class="modal-caption-wrap">
                   <p id="modalTitle" class="modal-title">Scrapbook photo</p>
+                  <p id="modalPeople" class="modal-people"></p>
                 </div>
               </div>
             </div>
@@ -395,6 +410,7 @@
         const photoModal = document.getElementById('photoModal');
         const modalImage = document.getElementById('modalImage');
         const modalTitle = document.getElementById('modalTitle');
+        const modalPeople = document.getElementById('modalPeople');
         const closeModalButton = document.getElementById('closeModal');
         const prevPhotoButton = document.getElementById('prevPhoto');
         const nextPhotoButton = document.getElementById('nextPhoto');
@@ -418,9 +434,30 @@
         const totalPages = Math.ceil(photoNumbers.length / photosPerPage);
         let currentPage = 1;
         let currentPhotoNumber = null;
+        // caption and people for each photo, keyed by file name, from the optional data.json
+        let photoDetails = {};
 
         function padPhotoNumber(photoNumber) {
           return String(photoNumber).padStart(3, '0');
+        }
+
+        // photo files are named <3 digit number>.jpg
+        function photoFile(photoNumber) {
+          return `${padPhotoNumber(photoNumber)}.jpg`;
+        }
+
+        function photoPath(photoNumber) {
+          return `${albumBasePath}/${photoFile(photoNumber)}`;
+        }
+
+        function photoCaption(photoNumber) {
+          const details = photoDetails[photoFile(photoNumber)];
+          return (details && details.caption) || `Photo ${padPhotoNumber(photoNumber)}`;
+        }
+
+        function photoPeople(photoNumber) {
+          const details = photoDetails[photoFile(photoNumber)];
+          return details && Array.isArray(details.people) ? details.people.join(', ') : '';
         }
 
         function updateModalButtons() {
@@ -430,10 +467,10 @@
 
         function openModal(photoNumber) {
           currentPhotoNumber = photoNumber;
-          const imageNumber = padPhotoNumber(photoNumber);
-          modalImage.src = `${albumBasePath}/${imageNumber}.jpg`;
-          modalImage.alt = `Scrapbook photo ${imageNumber}`;
-          modalTitle.textContent = `Photo ${imageNumber}`;
+          modalImage.src = photoPath(photoNumber);
+          modalImage.alt = photoCaption(photoNumber);
+          modalTitle.textContent = photoCaption(photoNumber);
+          modalPeople.textContent = photoPeople(photoNumber);
           photoModal.classList.add('open');
           photoModal.setAttribute('aria-hidden', 'false');
           updateModalButtons();
@@ -444,6 +481,7 @@
           photoModal.setAttribute('aria-hidden', 'true');
           modalImage.src = '';
           modalTitle.textContent = 'Scrapbook photo';
+          modalPeople.textContent = '';
           currentPhotoNumber = null;
         }
 
@@ -487,22 +525,29 @@
           gallery.innerHTML = '';
 
           visiblePhotos.forEach((photoNumber, index) => {
-            const imageNumber = padPhotoNumber(photoNumber);
             const figure = document.createElement('figure');
             figure.className = 'photo-card';
             figure.style.setProperty('--rotation', `${((index + currentPage) % 5 - 2) * 3.5}deg`);
 
             const img = document.createElement('img');
-            img.src = `${albumBasePath}/${imageNumber}.jpg`;
-            img.alt = `Scrapbook photo ${imageNumber}`;
+            img.src = photoPath(photoNumber);
+            img.alt = photoCaption(photoNumber);
             img.loading = 'lazy';
             img.addEventListener('click', () => openModal(photoNumber));
 
             const caption = document.createElement('figcaption');
-            caption.textContent = `Photo ${imageNumber}`;
+            caption.textContent = photoCaption(photoNumber);
 
             figure.appendChild(img);
             figure.appendChild(caption);
+
+            const people = photoPeople(photoNumber);
+            if (people) {
+              const peopleLine = document.createElement('p');
+              peopleLine.className = 'photo-people';
+              peopleLine.textContent = people;
+              figure.appendChild(peopleLine);
+            }
             gallery.appendChild(figure);
           });
 
@@ -562,6 +607,24 @@
         document.addEventListener('keydown', scrapbookKeyHandler);
 
         renderGallery();
+
+        // a scrapbook may have a data.json with a caption and people for each photo
+        fetch(`${albumBasePath}/data.json`)
+          .then(response => response.ok ? response.json() : null)
+          .then(data => {
+            if (!data || !Array.isArray(data.images)) {
+              return;
+            }
+
+            data.images.forEach(entry => {
+              photoDetails[entry.image] = entry;
+            });
+
+            renderGallery();
+          })
+          .catch(() => {
+            // no usable data.json, keep the numbered captions
+          });
       }
 
       function back() {
