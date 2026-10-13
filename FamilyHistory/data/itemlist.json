@@ -199,5 +199,20 @@
         "source": "Fletcher Chambers"
       }
     ]
+  },
+  {
+    "id": 13,
+    "name": "Rulon Wayne Hatch Scrapbook",
+    "description": "Scrapbook of Rulon Wayne Hatch",
+    "fsid": "",
+    "owner": "Rulon Wayne Hatch",
+    "demensions": "",
+    "material": "paper, photographs",
+    "photos": [],
+    "type": "scrapbook",
+    "scrapbookDir": "./RulonWayneHatch",
+    "photoCount": 152,
+    "stories": [
+    ]
   }
 ]
